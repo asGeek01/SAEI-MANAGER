@@ -49,6 +49,9 @@
         border: 10px solid #000000;
         opacity: 0.5;
     }
+    .text-justify{
+        text-align: justify;
+    }
 </style>
 <header class="container-fluid">
     <div class="row">
@@ -68,12 +71,12 @@
                     <li class="nav-item my-lg-auto"><a href="tarifs.php" class="nav-link">TARIFS</a></li>
                     <li class="nav-item my-lg-auto"><a href="propos.php" class="nav-link">A PROPOS</a></li>
                     <li class="nav-item">
-                        <a href="contact.php" class="nav-link">
+                        <a href="connexion.php" class="nav-link">
                             <button class="btn border border-dark rounded-0">CONNEXION</button>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="contact.php" class="nav-link">
+                        <a href="tarifs.php" class="nav-link">
                             <button class="btn btn-orange rounded-0">COMMENCER</button>
                         </a>
                     </li>
