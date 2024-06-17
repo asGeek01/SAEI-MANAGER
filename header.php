@@ -12,8 +12,9 @@
         color: white;
     }
     .btn-green:hover{
-        background-color: #00A65A;
-        color: white;
+        background-color: transparent;
+        color: #00A65A;
+        border: 2px solid #00A65A;
     }
     .btn-orange:hover{
         background-color: transparent;
@@ -35,6 +36,9 @@
     .border-orange{
         border: 2px solid #F76300;
     }
+    .border-orange{
+        border: 2px solid #F76300;
+    }
     .bg-select{
         background-color: #FFFAFA;
     }
@@ -45,9 +49,13 @@
         width: 45px;
         height: 45px;
     }
-    .cadrant{
+    .cadrant-index{
         border: 10px solid #000000;
         opacity: 0.5;
+    }
+    .cadrant-green{
+        border: 5px solid #00A65A;
+        opacity: 0.8;
     }
     .text-justify{
         text-align: justify;
@@ -57,7 +65,7 @@
     <div class="row">
         <div class="col">
             <h1>
-                <span class="text-success">SAEI</span>-<span class="text-orange">MANAGER</span>
+                <a href="index.php"><span class="text-success">SAEI</span>-<span class="text-orange">MANAGER</span></a>
             </h1>
         </div>
         <div class="col-8 navbar navbar-expand-lg m-0 p-0">

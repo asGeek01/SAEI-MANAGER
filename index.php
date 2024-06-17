@@ -124,7 +124,7 @@
                         </p>
                     </div>
                     <div class="col">
-                        <img src="assets/images/program-img.jpg" alt="Images de Dashboard" class="img-fluid cadrant rounded-4">
+                        <img src="assets/images/program-img.jpg" alt="Images de Dashboard" class="img-fluid cadrant-index rounded-4">
                     </div>
                 </div>
             </section>
@@ -156,7 +156,7 @@
                         </p>
                     </div>
                     <div class="col">
-                        <img src="assets/images/program-img.jpg" alt="Images de Dashboard" class="img-fluid cadrant rounded-4">
+                        <img src="assets/images/program-img.jpg" alt="Images de Dashboard" class="img-fluid cadrant-index rounded-4">
                     </div>
                 </div>
             </section>
@@ -188,7 +188,7 @@
                         </p>
                     </div>
                     <div class="col">
-                        <img src="assets/images/program-img.jpg" alt="Images de Dashboard" class="img-fluid cadrant rounded-4">
+                        <img src="assets/images/program-img.jpg" alt="Images de Dashboard" class="img-fluid cadrant-index rounded-4">
                     </div>
                 </div>
             </section>
@@ -220,7 +220,7 @@
                         </p>
                     </div>
                     <div class="col">
-                        <img src="assets/images/program-img.jpg" alt="Images de Dashboard" class="img-fluid cadrant rounded-4">
+                        <img src="assets/images/program-img.jpg" alt="Images de Dashboard" class="img-fluid cadrant-index rounded-4">
                     </div>
                 </div>
             </section>
@@ -283,7 +283,7 @@
                         </p>
                     </div>
                     <div class="col">
-                        <img src="assets/images/program-img.jpg" alt="Images de Dashboard" class="img-fluid cadrant rounded-4">
+                        <img src="assets/images/program-img.jpg" alt="Images de Dashboard" class="img-fluid cadrant-index rounded-4">
                     </div>
                 </div>
             </section>
@@ -315,7 +315,7 @@
                         </p>
                     </div>
                     <div class="col">
-                        <img src="assets/images/program-img.jpg" alt="Images de Dashboard" class="img-fluid cadrant rounded-4">
+                        <img src="assets/images/program-img.jpg" alt="Images de Dashboard" class="img-fluid cadrant-index rounded-4">
                     </div>
                 </div>
             </section>
@@ -347,7 +347,7 @@
                         </p>
                     </div>
                     <div class="col">
-                        <img src="assets/images/program-img.jpg" alt="Images de Dashboard" class="img-fluid cadrant rounded-4">
+                        <img src="assets/images/program-img.jpg" alt="Images de Dashboard" class="img-fluid cadrant-index rounded-4">
                     </div>
                 </div>
             </section>
