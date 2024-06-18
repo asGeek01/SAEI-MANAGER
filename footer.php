@@ -20,9 +20,9 @@
         <div class="col">
             <h3>SOLUTION</h3>
             <ul class="mt-3 list-unstyled">
-                <li><a href="fonctionnalites.php#program" class="text-light">SAEI</a></li>
-                <li class="my-3"><a href="fonctionnalites.php#financement" class="text-light">COACH</a></li>
-                <li><a href="fonctionnalites.php#oeuvre" class="text-light">ENTREPRENEURS</a></li>
+                <li><a href="solution.php" class="text-light">SAEI</a></li>
+                <li class="my-3"><a href="solution.php" class="text-light">COACH</a></li>
+                <li><a href="solution.php" class="text-light">ENTREPRENEURS</a></li>
             </ul>
         </div>
         <div class="col">

@@ -31,9 +31,6 @@
     .hideProgram, .hideSAEI{
         display: block;
     }
-    .cursor{
-        cursor: pointer;
-    }
 </style>
 <body>
     <!-- DEBUT PARTIE: HEADER -->
@@ -50,7 +47,9 @@
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto saepe iure, itaque in cumque asperiores.
                 </p>
                 <p>
-                    <button class="btn btn-orange">COMMENCER</button>
+                    <a href="tarifs.php">
+                        <button class="btn btn-orange">COMMENCER</button>
+                    </a>
                 </p>
             </div>
             <div class="col d-flex justify-content-center">
@@ -120,7 +119,9 @@
                             Suivie et évaluation 
                         </p>
                         <p class="mt-4">
-                            <button class="btn btn-orange rounded-0">En savoir plus...</button>
+                            <a href="fonctionnalites.php">
+                                <button class="btn btn-orange rounded-0">En savoir plus...</button>
+                            </a>
                         </p>
                     </div>
                     <div class="col">
@@ -152,7 +153,9 @@
                             Suivie et évaluation 
                         </p>
                         <p class="mt-4">
-                            <button class="btn btn-orange rounded-0">En savoir plus...</button>
+                            <a href="fonctionnalites.php">
+                                <button class="btn btn-orange rounded-0">En savoir plus...</button>
+                            </a>
                         </p>
                     </div>
                     <div class="col">
@@ -184,7 +187,9 @@
                             Suivie et évaluation 
                         </p>
                         <p class="mt-4">
-                            <button class="btn btn-orange rounded-0">En savoir plus...</button>
+                            <a href="fonctionnalites.php">
+                                <button class="btn btn-orange rounded-0">En savoir plus...</button>
+                            </a>
                         </p>
                     </div>
                     <div class="col">
@@ -216,7 +221,9 @@
                             Suivie et évaluation 
                         </p>
                         <p class="mt-4">
-                            <button class="btn btn-orange rounded-0">En savoir plus...</button>
+                            <a href="fonctionnalites.php">
+                                <button class="btn btn-orange rounded-0">En savoir plus...</button>
+                            </a>
                         </p>
                     </div>
                     <div class="col">
@@ -279,7 +286,9 @@
                             Suivie et évaluation 
                         </p>
                         <p class="mt-4">
-                            <button class="btn btn-orange rounded-0">En savoir plus...</button>
+                            <a href="solution.php">
+                                <button class="btn btn-orange rounded-0">En savoir plus...</button>
+                            </a>
                         </p>
                     </div>
                     <div class="col">
@@ -311,7 +320,9 @@
                             Suivie et évaluation 
                         </p>
                         <p class="mt-4">
-                            <button class="btn btn-orange rounded-0">En savoir plus...</button>
+                            <a href="solution.php">
+                                <button class="btn btn-orange rounded-0">En savoir plus...</button>
+                            </a>
                         </p>
                     </div>
                     <div class="col">
@@ -343,7 +354,9 @@
                             Suivie et évaluation 
                         </p>
                         <p class="mt-4">
-                            <button class="btn btn-orange rounded-0">En savoir plus...</button>
+                            <a href="solution.php">
+                                <button class="btn btn-orange rounded-0">En savoir plus...</button>
+                            </a>
                         </p>
                     </div>
                     <div class="col">

@@ -46,7 +46,9 @@
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptates numquam saepe earum, aspernatur quod?
             </p>
             <p>
-                <button class="btn btn-orange rounded-0">COMMENCER</button>
+                <a href="tarifs.php">
+                    <button class="btn btn-orange rounded-0">COMMENCER</button>
+                </a>
             </p>
         </div>
         <div class="col">

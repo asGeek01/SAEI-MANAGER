@@ -49,6 +49,9 @@
         width: 45px;
         height: 45px;
     }
+    .cursor{
+        cursor: pointer;
+    }
     .cadrant-index{
         border: 10px solid #000000;
         opacity: 0.5;

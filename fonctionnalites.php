@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,7 +46,9 @@
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto saepe iure, itaque in cumque asperiores.
             </p>
             <p>
-                <button class="btn btn-orange rounded-0">COMMENCER</button>
+                <a href="tarifs.php">
+                    <button class="btn btn-orange rounded-0">COMMENCER</button>
+                </a>
             </p>
         </div>
         <div class="col">
@@ -56,7 +58,7 @@
 
     <!-- DEBUT FONCTIONNALITES 1 -->
     <section class="row mt-5 mb-3">
-        <div class="col d-flex justify-content-center my-2">
+        <div class="col d-flex justify-content-center my-2" id="program">
             <i class="fa fa-circle text-orange mt-1 me-3"> </i> <span class="my-auto text-orange">ELABORER UN PROGRAMME</span>
         </div>
     </section>
@@ -72,7 +74,7 @@
 
     <!-- DEBUT FONCTIONNALITES 2 -->
     <section class="row mt-5 mb-3">
-        <div class="col d-flex justify-content-center my-2">
+        <div class="col d-flex justify-content-center my-2" id="financement">
             <i class="fa fa-circle text-orange mt-1 me-3"> </i> <span class="my-auto text-orange">RECHERCHE DE FINANCEMENT</span>
         </div>
     </section>
@@ -88,7 +90,7 @@
 
     <!-- DEBUT FONCTIONNALITES 3 -->
     <section class="row mt-5 mb-3">
-        <div class="col d-flex justify-content-center my-2">
+        <div class="col d-flex justify-content-center my-2" id="oeuvre">
             <i class="fa fa-circle text-orange mt-1 me-3"> </i> <span class="my-auto text-orange">MISE EN OEUVRE DU PROGRAMME</span>
         </div>
     </section>
@@ -104,7 +106,7 @@
 
     <!-- DEBUT FONCTIONNALITES 2 -->
     <section class="row mt-5 mb-3">
-        <div class="col d-flex justify-content-center my-2">
+        <div class="col d-flex justify-content-center my-2" id="suivie">
             <i class="fa fa-circle text-orange mt-1 me-3"> </i> <span class="my-auto text-orange">SUIVIE ET EVALUATION</span>
         </div>
     </section>
