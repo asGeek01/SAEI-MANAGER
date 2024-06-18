@@ -65,7 +65,9 @@
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure possimus quas saepe quos ratione itaque rerum consequuntur aliquid magnam obcaecati.
             </p>
             <p class="my-4 text-center">
-                <button class="btn btn-green py-3 col-12">Commencer Gratuitement</button>
+                <a href="start.php">
+                    <button class="btn btn-green py-3 col-12">Commencer Gratuitement</button>
+                </a>
             </p>
             <h5 class="my-3">FONCTIONS DISPONIBLES</h5>
             <p>
