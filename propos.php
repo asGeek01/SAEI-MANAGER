@@ -1,3 +1,5 @@
+
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -76,12 +78,28 @@
             </div>
         </div>
         <div class="row">
+            
             <div class="col text-center">
-                <button class="btn btn-orange" onclick="cacherContact()">Contactez-Nous</button>
+                <div class="col">
+                    <button class="btn btn-orange" onclick="cacherContact()">Contactez-Nous</button>
+                </div>
+                <?php if(isset($_SESSION['error'])){ ?>
+                    <div class="col">
+                        <p class="alert alert-danger col-3 text-center">
+                            <?php echo $_SESSION['error']; unset($_SESSION['error']); ?>
+                        </p>
+                    </div>
+                <?php }elseif(isset($_SESSION['success'])){ ?>
+                    <div class="col">
+                        <p class="alert alert-success col-3">
+                            <?php echo $_SESSION['success']; unset($_SESSION['success']); ?>
+                        </p>
+                    </div>
+                <?php } ?>
             </div>
         </div>
         <section id="contact-us" class="container my-4">
-            <form action="#" method="post">
+            <form action="envoiMailContact.php" method="post">
                 <div class="row">
                     <div class="col">
                         <input type="text" name="nom" id="nom" class="form-control py-3" placeholder="NOM: JOHN DOE">
