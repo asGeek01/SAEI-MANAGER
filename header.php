@@ -3,6 +3,16 @@
         color: black;
         text-decoration: none;
     }
+    .activate{
+        text-decoration: underline;
+        color: #f76300;
+        font-weight: bold;
+    }
+    .activate:hover{
+        text-decoration: underline;
+        color: #f76300;
+        font-weight: bold;
+    }
     .btn-orange{
         background-color: #F76300;
         color: white;
@@ -67,9 +77,9 @@
 <header class="container">
     <div class="row">
         <div class="col">
-            <h1>
+            <h2 class="my-auto">
                 <a href="index.php"><span class="text-success">SAEI</span>-<span class="text-orange">MANAGER</span></a>
-            </h1>
+            </h2>
         </div>
         <div class="col navbar navbar-expand-lg m-0 p-0">
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -77,10 +87,10 @@
             </button>
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav">
-                    <li class="nav-item my-lg-auto"><a href="fonctionnalites.php" class="nav-link">FONCTIONNALITES</a></li>
-                    <li class="nav-item my-lg-auto"><a href="solution.php" class="nav-link">SOLUTION</a></li>
-                    <li class="nav-item my-lg-auto"><a href="tarifs.php" class="nav-link">TARIFS</a></li>
-                    <li class="nav-item my-lg-auto col-2"><a href="propos.php" class="nav-link">A PROPOS</a></li>
+                    <li class="nav-item my-lg-auto"><a href="fonctionnalites.php" class="nav-link <?php if($active == "fonctionnalites"): ?> activate <?php endif ?>">FONCTIONNALITES</a></li>
+                    <li class="nav-item my-lg-auto"><a href="solution.php" class="nav-link <?php if($active == "solution"): ?> activate <?php endif ?>">SOLUTION</a></li>
+                    <li class="nav-item my-lg-auto"><a href="tarifs.php" class="nav-link <?php if($active == "tarifs"): ?> activate <?php endif ?>">TARIFS</a></li>
+                    <li class="nav-item my-lg-auto col-2"><a href="propos.php" class="nav-link <?php if($active == "propos"): ?> activate <?php endif ?>">A PROPOS</a></li>
                     <li class="nav-item">
                         <a href="connexion.php" class="nav-link">
                             <button class="btn border border-dark rounded-0">CONNEXION</button>
@@ -95,6 +105,6 @@
             </div>
         </div>
     </div>
+    <hr>
 </header>
-<hr>
 <script src="assets/js/bootstrap.min.js"></script>

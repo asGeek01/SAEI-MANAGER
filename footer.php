@@ -9,7 +9,7 @@
             </p>
         </div>
         <div class="col">
-            <h3>FONCTIONNALITES</h3>
+            <h4>FONCTIONNALITES</h4>
             <ul class="mt-3 list-unstyled">
                 <li><a href="fonctionnalites.php#program" class="text-light">Elaborer un programme</a></li>
                 <li class="my-3"><a href="fonctionnalites.php#financement" class="text-light">Rechercher un financement</a></li>
@@ -18,7 +18,7 @@
             </ul>
         </div>
         <div class="col">
-            <h3>SOLUTION</h3>
+            <h4>SOLUTION</h4>
             <ul class="mt-3 list-unstyled">
                 <li><a href="solution.php" class="text-light">SAEI</a></li>
                 <li class="my-3"><a href="solution.php" class="text-light">COACH</a></li>
@@ -26,7 +26,7 @@
             </ul>
         </div>
         <div class="col">
-            <h3>NEWSLETTER</h3>
+            <h4>NEWSLETTER</h4>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, saepe!
             </p>
@@ -43,7 +43,7 @@
                 </form>
             </div>
             <div class="mt-4">
-                <h4>NOS RESEAUX</h4>
+                <h6>NOS RESEAUX</h6>
                 <p class="my-2" style="font-size: 35px;">
                     <i class="fa fa-facebook-square"></i>
                     <i class="fa fa-whatsapp mx-2"></i>
@@ -55,7 +55,7 @@
     <hr>
     <div class="row mx-3">
         <div class="col mb-3">
-            ©Copyright © 2024 <span class="text-green">SAEI</span>- <span class="text-orange">MANAGER</span> | Tous droits réservés
+            <p class="h6">©Copyright © 2024 <span class="text-green">SAEI</span>- <span class="text-orange">MANAGER</span> | Tous droits réservés</p>
         </div>
         <div class="col mb-3 text-end">
             Confidentialités & Conditions d'utilisations

@@ -1,5 +1,7 @@
-
-<?php session_start(); $_SESSION['error'] = 'Test'; ?>
+<?php 
+    session_start();
+    $active = "propos";
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>

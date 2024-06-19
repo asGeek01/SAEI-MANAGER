@@ -225,7 +225,7 @@
                 <div class="my-3">
                     <label for="motDePasse1" class="form-label">Confirmer le mot de passe: </label>
                     <input type="password" name="motDePasse1" id="motDePasse1" class="form-control border border-dark" required>
-                </div><?= $_POST['learn'] ?> <?= $_POST['coach'] ?> <?= $_POST['cohortes'] ?>
+                </div>
                 <div class="my-5 text-end">
                     <button class="btn btn-green rounded-0 px-4">CREER</button>
                 </div>

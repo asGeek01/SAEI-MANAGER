@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+    $active = "fonctionnalites";
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>

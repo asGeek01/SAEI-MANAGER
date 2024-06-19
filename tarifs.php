@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+    $active = "tarifs";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

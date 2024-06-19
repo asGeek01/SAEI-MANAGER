@@ -31,6 +31,45 @@
     .hideProgram, .hideSAEI{
         display: block;
     }
+    @keyframes fadeInUpY {
+        from {
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .animated-text-y {
+        animation: fadeInUpY 2s ease-in-out;
+    }
+    @keyframes fadeInUpXl {
+        from {
+            opacity: 0;
+            transform: translateX(-300px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    .animated-text-x-left {
+        animation: fadeInUpXl 2s ease-in-out;
+    }
+    @keyframes fadeInUpXr {
+        from {
+            opacity: 0;
+            transform: translateX(500px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    .animated-text-x-right {
+        animation: fadeInUpXr 2s ease-in-out;
+    }
 </style>
 <body>
     <!-- DEBUT PARTIE: HEADER -->
@@ -40,8 +79,8 @@
     <!-- DEBUT PARTIE: PRESENTATION -->
     <main class="container-fluid">
 
-        <section class="row mx-auto d-flex justify-content-center">
-            <div class="col mt-5 ms-5 py-4 px-5">
+        <section class="row mx-auto d-flex justify-content-center ps-5">
+            <div class="col mt-5 ms-5 py-4 px-5 animated-text-x-left">
                 <h1 class="text-start">LOREM IPSUM DOLOR SIT AMET.</h1>
                 <p class="my-5">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto saepe iure, itaque in cumque asperiores.
@@ -52,12 +91,12 @@
                     </a>
                 </p>
             </div>
-            <div class="col d-flex justify-content-center">
+            <div class="col d-flex justify-content-center animated-text-x-right">
                 <img src="assets/images/header-img.png" alt="Image du Header" class="img-fluid">
             </div>
         </section>
 
-        <section class="row bg p-5">
+        <section class="row bg p-5 animated-text-y">
             <div class="col mx-auto d-flex justify-content-center">
                 <img src="assets/images/dashboard.png" alt="Image du Dashboard" class="img-fluid border border-secondary rounded-3 w-75">
             </div> 
@@ -65,19 +104,19 @@
 
         <!-- DEBUT PARTIE: FONCTIONNALTES -->
         <section class="my-5">
-            <div class="row">
+            <div class="row animated-text-y">
                 <div class="col text-center">
                     <h2 class="">LOREM IPSUM DOOR SIT <span class="bg-green py-2 pe-5">AMET.</span></h2>
                 </div>
             </div>
-            <div class="row my-3">
+            <div class="row my-3 animated-text-y">
                 <div class="col text-center">
                     <p class="w-50 mx-auto">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure possimus quas saepe quos ratione itaque rerum consequuntur aliquid magnam obcaecati.
                     </p>
                 </div>
             </div>
-            <div class="row mx-5">
+            <div class="row mx-5 animated-text-y">
                 <div class="col mx-auto text-center bg-select border-bottom-orange cursor" id="program" onclick="showSection('Program')">
                     <img src="assets/images/programme.png" alt="LES PROGRAMMES" class="img-fluid d-meme-icone"> 
                     PROGRAMME
@@ -95,7 +134,7 @@
                     LEARN
                 </div>
             </div>
-            <section class="my-4 hideProgram">
+            <section class="my-4 hideProgram animated-text-y">
                 <div class="row bg-select rounded-4 p-5 mx-3">
                     <div class="col">
                         <h3>LOREM IPSUM SI DOLOR AMET.</h3>
@@ -129,7 +168,7 @@
                     </div>
                 </div>
             </section>
-            <section class="my-4 hideCohortes">
+            <section class="my-4 hideCohortes animated-text-y">
                 <div class="row bg-select rounded-4 p-5 mx-3">
                     <div class="col">
                         <h3>LOREM IPSUM SI DOLOR AMET. (COHORTES)</h3>
@@ -163,7 +202,7 @@
                     </div>
                 </div>
             </section>
-            <section class="my-4 hideCoach">
+            <section class="my-4 hideCoach animated-text-y">
                 <div class="row bg-select rounded-4 p-5 mx-3">
                     <div class="col">
                         <h3>LOREM IPSUM SI DOLOR AMET. (COACH)</h3>
@@ -197,7 +236,7 @@
                     </div>
                 </div>
             </section>
-            <section class="my-4 hideLearn">
+            <section class="my-4 hideLearn animated-text-y">
                 <div class="row bg-select rounded-4 p-5 mx-3">
                     <div class="col">
                         <h3>LOREM IPSUM SI DOLOR AMET. (LEARN)</h3>
@@ -236,19 +275,19 @@
 
         <!-- DEBUT PARTIE: SOLUTION -->
         <section class="my-5">
-            <div class="row">
+            <div class="row animated-text-y">
                 <div class="col text-center">
                     <h2 class="">LOREM IPSUM DOOR SIT <span class="bg-green py-2 pe-5">AMET.</span></h2>
                 </div>
             </div>
-            <div class="row my-3">
+            <div class="row my-3 animated-text-y">
                 <div class="col text-center">
                     <p class="w-50 mx-auto">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure possimus quas saepe quos ratione itaque rerum consequuntur aliquid magnam obcaecati.
                     </p>
                 </div>
             </div>
-            <div class="row mx-5">
+            <div class="row mx-5 animated-text-y">
                 <div class="col mx-auto text-center bg-select border-bottom-orange cursor" id="saei" onclick="showSection1('SAEI')">
                     <img src="assets/images/programme.png" alt="LES PROGRAMMES" class="img-fluid d-meme-icone"> 
                     SAEI
@@ -262,7 +301,7 @@
                     ENTREPRENEURS
                 </div>
             </div>
-            <section class="my-4 hideSAEI">
+            <section class="my-4 hideSAEI animated-text-y">
                 <div class="row bg-select rounded-4 p-5 mx-3">
                     <div class="col">
                         <h3>LOREM IPSUM SI DOLOR AMET. (SAEI)</h3>
@@ -296,7 +335,7 @@
                     </div>
                 </div>
             </section>
-            <section class="my-4 hideSCoach">
+            <section class="my-4 hideSCoach animated-text-y">
                 <div class="row bg-select rounded-4 p-5 mx-3">
                     <div class="col">
                         <h3>LOREM IPSUM SI DOLOR AMET. (COACH)</h3>
@@ -330,7 +369,7 @@
                     </div>
                 </div>
             </section>
-            <section class="my-4 hideSEntrepreneur">
+            <section class="my-4 hideSEntrepreneur animated-text-y">
                 <div class="row bg-select rounded-4 p-5 mx-3">
                     <div class="col">
                         <h3>LOREM IPSUM SI DOLOR AMET. (Entrepreneurs)</h3>
