@@ -1,5 +1,5 @@
 
-<?php session_start(); ?>
+<?php session_start(); $_SESSION['error'] = 'Test'; ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -18,11 +18,6 @@
     <!-- Lien icone WSA -->
     <link rel="icon" href="images/logo.png">
 </head>
-<style>
-    #contact-us{
-        display: none;
-    }
-</style>
 <body>
     <!-- DEBUT PARTIE: HEADER -->
     <?php require 'header.php'; ?>
@@ -78,14 +73,15 @@
             </div>
         </div>
         <div class="row">
-            
             <div class="col text-center">
-                <div class="col">
-                    <button class="btn btn-orange" onclick="cacherContact()">Contactez-Nous</button>
-                </div>
+                <button class="btn btn-orange" onclick="cacherContact()">Contactez-Nous</button>
+            </div>
+        </div>
+        <section id="contact-us" class="container my-4">
+            <form action="envoiMailContact.php" method="post">
                 <?php if(isset($_SESSION['error'])){ ?>
                     <div class="col">
-                        <p class="alert alert-danger col-3 text-center">
+                        <p class="alert alert-danger">
                             <?php echo $_SESSION['error']; unset($_SESSION['error']); ?>
                         </p>
                     </div>
@@ -96,10 +92,6 @@
                         </p>
                     </div>
                 <?php } ?>
-            </div>
-        </div>
-        <section id="contact-us" class="container my-4">
-            <form action="envoiMailContact.php" method="post">
                 <div class="row">
                     <div class="col">
                         <input type="text" name="nom" id="nom" class="form-control py-3" placeholder="NOM: JOHN DOE">
@@ -133,13 +125,3 @@
     <!-- FIN PARTIE: FOOTER -->
 </body>
 </html>
-<script>
-    function cacherContact(){
-        const contact = document.getElementById('contact-us');
-        if(contact.style.display == "none"){
-            contact.style.display = "block";
-        }else{
-            contact.style.display = "none";
-        }
-    }
-</script>

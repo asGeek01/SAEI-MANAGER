@@ -58,620 +58,630 @@
             ENTREPRENEURS
         </div>
     </div>
-    <div class="row my-4 mx-5 hideTSAEI">
-        <div class="col cadrant-green rounded-4 shadow p-3">
-            <h3 class="text-center">VERSION D'ESSAI (SAEI)</h3>
-            <p class="text-center">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure possimus quas saepe quos ratione itaque rerum consequuntur aliquid magnam obcaecati.
-            </p>
-            <p class="my-4 text-center">
-                <a href="start.php">
-                    <button class="btn btn-green py-3 col-12">Commencer Gratuitement</button>
-                </a>
-            </p>
-            <h5 class="my-3">FONCTIONS DISPONIBLES</h5>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
+    <section class="my-4 hideTSAEI mx-5">
+        <div class="row">
+            <div class="col cadrant-green rounded-4 shadow p-3">
+                <h3 class="text-center">VERSION D'ESSAI (SAEI)</h3>
+                <p class="text-center">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure possimus quas saepe quos ratione itaque rerum consequuntur aliquid magnam obcaecati.
+                </p>
+                <p class="my-4 text-center">
+                    <a href="start.php">
+                        <button class="btn btn-green py-3 col-12">Commencer Gratuitement</button>
+                    </a>
+                </p>
+                <h5 class="my-3">FONCTIONS DISPONIBLES</h5>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+            </div>
+            <div class="col cadrant-green rounded-4 shadow p-3 mx-5 mt-5">
+                <h3 class="text-center">VERSION STANDARD</h3>
+                <p class="text-center">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure possimus quas saepe quos ratione itaque rerum consequuntur aliquid magnam obcaecati.
+                </p>
+                <h4 class="text-center text-green my-4">100.000 XOF</h4>
+                <p class="my-3">
+                    <form action="#" method="post">
+                        <div class="mb-3">
+                            <label for="collaborateur" class="form-label">Nombre d'Utilisateur(s)</label>
+                            <p>
+                                Les utilisateurs inclus: <br>
+                                Incubé, Coach & Equipe
+                            </p>
+                            <input type="number" class="form-control" name="collaborateur" id="collaborateur" min="1" value="1">
+                        </div>
+                        <div>
+                            <button class="btn btn-green py-3 col-12">COMMENCER</button>
+                        </div>
+                        
+                    </form>
+                </p>
+                <h5 class="my-3">FONCTIONS DISPONIBLES</h5>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+            </div>
+            <div class="col cadrant-green rounded-4 p-3 shadow">
+                <h3 class="text-center">AVANCE</h3>
+                <p class="text-center">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure possimus quas saepe quos ratione itaque rerum consequuntur aliquid magnam obcaecati.
+                </p>
+                <h4 class="text-center text-green my-4">250.000 XOF</h4>
+                <p class="my-3">
+                    <form action="#" method="post">
+                        <div class="mb-3">
+                            <label for="collaborateur" class="form-label">Nombre d'Utilisateur(s)</label>
+                            <p>
+                                Les utilisateurs inclus: <br>
+                                Incubé, Coach & Equipe
+                            </p>
+                            <input type="number" class="form-control" name="collaborateur" id="collaborateur" min="1" value="1">
+                        </div>
+                        <div>
+                            <button class="btn btn-green py-3 col-12">COMMENCER</button>
+                        </div>
+                        
+                    </form>
+                </p>
+                <h5 class="my-3">FONCTIONS DISPONIBLES</h5>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+            </div>
         </div>
-        <div class="col cadrant-green rounded-4 shadow p-3 mx-5 mt-5">
-            <h3 class="text-center">VERSION STANDARD</h3>
-            <p class="text-center">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure possimus quas saepe quos ratione itaque rerum consequuntur aliquid magnam obcaecati.
-            </p>
-            <h4 class="text-center text-green my-4">100.000 XOF</h4>
-            <p class="my-3">
-                <form action="#" method="post">
-                    <div class="mb-3">
-                        <label for="collaborateur" class="form-label">Nombre d'Utilisateur(s)</label>
-                        <p>
-                            Les utilisateurs inclus: <br>
-                            Incubé, Coach & Equipe
-                        </p>
-                        <input type="number" class="form-control" name="collaborateur" id="collaborateur" min="1" value="1">
-                    </div>
-                    <div>
-                        <button class="btn btn-green py-3 col-12">COMMENCER</button>
-                    </div>
-                    
-                </form>
-            </p>
-            <h5 class="my-3">FONCTIONS DISPONIBLES</h5>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
+    </section>
+    <section class="my-4 hideTCoach mx-5">
+        <div class="row">
+            <div class="col cadrant-green rounded-4 shadow p-3">
+                <h3 class="text-center">VERSION D'ESSAI (COACH)</h3>
+                <p class="text-center">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure possimus quas saepe quos ratione itaque rerum consequuntur aliquid magnam obcaecati.
+                </p>
+                <p class="my-4 text-center">
+                    <a href="start.php">
+                        <button class="btn btn-green py-3 col-12">Commencer Gratuitement</button>
+                    </a>
+                </p>
+                <h5 class="my-3">FONCTIONS DISPONIBLES</h5>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+            </div>
+            <div class="col cadrant-green rounded-4 shadow p-3 mx-5 mt-5">
+                <h3 class="text-center">VERSION STANDARD</h3>
+                <p class="text-center">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure possimus quas saepe quos ratione itaque rerum consequuntur aliquid magnam obcaecati.
+                </p>
+                <h4 class="text-center text-green my-4">100.000 XOF</h4>
+                <p class="my-3">
+                    <form action="#" method="post">
+                        <div class="mb-3">
+                            <label for="collaborateur" class="form-label">Nombre d'Utilisateur(s)</label>
+                            <p>
+                                Les utilisateurs inclus: <br>
+                                Incubé, Coach & Equipe
+                            </p>
+                            <input type="number" class="form-control" name="collaborateur" id="collaborateur" min="1" value="1">
+                        </div>
+                        <div>
+                            <button class="btn btn-green py-3 col-12">COMMENCER</button>
+                        </div>
+                        
+                    </form>
+                </p>
+                <h5 class="my-3">FONCTIONS DISPONIBLES</h5>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+            </div>
+            <div class="col cadrant-green rounded-4 p-3 shadow">
+                <h3 class="text-center">AVANCE</h3>
+                <p class="text-center">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure possimus quas saepe quos ratione itaque rerum consequuntur aliquid magnam obcaecati.
+                </p>
+                <h4 class="text-center text-green my-4">250.000 XOF</h4>
+                <p class="my-3">
+                    <form action="#" method="post">
+                        <div class="mb-3">
+                            <label for="collaborateur" class="form-label">Nombre d'Utilisateur(s)</label>
+                            <p>
+                                Les utilisateurs inclus: <br>
+                                Incubé, Coach & Equipe
+                            </p>
+                            <input type="number" class="form-control" name="collaborateur" id="collaborateur" min="1" value="1">
+                        </div>
+                        <div>
+                            <button class="btn btn-green py-3 col-12">COMMENCER</button>
+                        </div>
+                        
+                    </form>
+                </p>
+                <h5 class="my-3">FONCTIONS DISPONIBLES</h5>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+            </div>
         </div>
-        <div class="col cadrant-green rounded-4 p-3 shadow">
-            <h3 class="text-center">AVANCE</h3>
-            <p class="text-center">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure possimus quas saepe quos ratione itaque rerum consequuntur aliquid magnam obcaecati.
-            </p>
-            <h4 class="text-center text-green my-4">250.000 XOF</h4>
-            <p class="my-3">
-                <form action="#" method="post">
-                    <div class="mb-3">
-                        <label for="collaborateur" class="form-label">Nombre d'Utilisateur(s)</label>
-                        <p>
-                            Les utilisateurs inclus: <br>
-                            Incubé, Coach & Equipe
-                        </p>
-                        <input type="number" class="form-control" name="collaborateur" id="collaborateur" min="1" value="1">
-                    </div>
-                    <div>
-                        <button class="btn btn-green py-3 col-12">COMMENCER</button>
-                    </div>
-                    
-                </form>
-            </p>
-            <h5 class="my-3">FONCTIONS DISPONIBLES</h5>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
+    </section>
+    <section class="my-4 hideTEntrepreneur mx-5">
+        <div class="row">
+            <div class="col cadrant-green rounded-4 shadow p-3">
+                <h3 class="text-center">VERSION D'ESSAI (ENTREPRENEUR)</h3>
+                <p class="text-center">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure possimus quas saepe quos ratione itaque rerum consequuntur aliquid magnam obcaecati.
+                </p>
+                <p class="my-4 text-center">
+                    <a href="start.php">
+                        <button class="btn btn-green py-3 col-12">Commencer Gratuitement</button>
+                    </a>
+                </p>
+                <h5 class="my-3">FONCTIONS DISPONIBLES</h5>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+            </div>
+            <div class="col cadrant-green rounded-4 shadow p-3 mx-5 mt-5">
+                <h3 class="text-center">VERSION STANDARD</h3>
+                <p class="text-center">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure possimus quas saepe quos ratione itaque rerum consequuntur aliquid magnam obcaecati.
+                </p>
+                <h4 class="text-center text-green my-4">100.000 XOF</h4>
+                <p class="my-3">
+                    <form action="#" method="post">
+                        <div class="mb-3">
+                            <label for="collaborateur" class="form-label">Nombre d'Utilisateur(s)</label>
+                            <p>
+                                Les utilisateurs inclus: <br>
+                                Incubé, Coach & Equipe
+                            </p>
+                            <input type="number" class="form-control" name="collaborateur" id="collaborateur" min="1" value="1">
+                        </div>
+                        <div>
+                            <button class="btn btn-green py-3 col-12">COMMENCER</button>
+                        </div>
+                        
+                    </form>
+                </p>
+                <h5 class="my-3">FONCTIONS DISPONIBLES</h5>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-remove text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+            </div>
+            <div class="col cadrant-green rounded-4 p-3 shadow">
+                <h3 class="text-center">AVANCE</h3>
+                <p class="text-center">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure possimus quas saepe quos ratione itaque rerum consequuntur aliquid magnam obcaecati.
+                </p>
+                <h4 class="text-center text-green my-4">250.000 XOF</h4>
+                <p class="my-3">
+                    <form action="#" method="post">
+                        <div class="mb-3">
+                            <label for="collaborateur" class="form-label">Nombre d'Utilisateur(s)</label>
+                            <p>
+                                Les utilisateurs inclus: <br>
+                                Incubé, Coach & Equipe
+                            </p>
+                            <input type="number" class="form-control" name="collaborateur" id="collaborateur" min="1" value="1">
+                        </div>
+                        <div>
+                            <button class="btn btn-green py-3 col-12">COMMENCER</button>
+                        </div>
+                        
+                    </form>
+                </p>
+                <h5 class="my-3">FONCTIONS DISPONIBLES</h5>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+                <p>
+                    <i class="fa fa-check-circle text-green"></i>
+                    Lorem ipsum dolor sit amet consectetur.
+                </p>
+            </div>
         </div>
-    </div>
-    <div class="row my-4 mx-5 hideTCoach">
-        <div class="col-3 cadrant-green rounded-4 shadow p-3">
-            <h3 class="text-center">VERSION D'ESSAI (COACH)</h3>
-            <p class="text-center">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure possimus quas saepe quos ratione itaque rerum consequuntur aliquid magnam obcaecati.
-            </p>
-            <p class="my-4 text-center">
-                <button class="btn btn-green py-3 col-12">Commencer Gratuitement</button>
-            </p>
-            <h5 class="my-3">FONCTIONS DISPONIBLES</h5>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-        </div>
-        <div class="col-3 cadrant-green rounded-4 shadow p-3 mx-5 mt-5">
-            <h3 class="text-center">VERSION STANDARD</h3>
-            <p class="text-center">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure possimus quas saepe quos ratione itaque rerum consequuntur aliquid magnam obcaecati.
-            </p>
-            <h4 class="text-center text-green my-4">100.000 XOF</h4>
-            <p class="my-3">
-                <form action="#" method="post">
-                    <div class="mb-3">
-                        <label for="collaborateur" class="form-label">Nombre d'Utilisateur(s)</label>
-                        <p>
-                            Les utilisateurs inclus: <br>
-                            Incubé, Coach & Equipe
-                        </p>
-                        <input type="number" class="form-control" name="collaborateur" id="collaborateur" min="1" value="1">
-                    </div>
-                    <div>
-                        <button class="btn btn-green py-3 col-12">COMMENCER</button>
-                    </div>
-                    
-                </form>
-            </p>
-            <h5 class="my-3">FONCTIONS DISPONIBLES</h5>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-        </div>
-        <div class="col-3 cadrant-green rounded-4 p-3 shadow">
-            <h3 class="text-center">AVANCE</h3>
-            <p class="text-center">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure possimus quas saepe quos ratione itaque rerum consequuntur aliquid magnam obcaecati.
-            </p>
-            <h4 class="text-center text-green my-4">250.000 XOF</h4>
-            <p class="my-3">
-                <form action="#" method="post">
-                    <div class="mb-3">
-                        <label for="collaborateur" class="form-label">Nombre d'Utilisateur(s)</label>
-                        <p>
-                            Les utilisateurs inclus: <br>
-                            Incubé, Coach & Equipe
-                        </p>
-                        <input type="number" class="form-control" name="collaborateur" id="collaborateur" min="1" value="1">
-                    </div>
-                    <div>
-                        <button class="btn btn-green py-3 col-12">COMMENCER</button>
-                    </div>
-                    
-                </form>
-            </p>
-            <h5 class="my-3">FONCTIONS DISPONIBLES</h5>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-        </div>
-    </div>
-    <div class="row my-4 mx-5 hideTEntrepreneur">
-        <div class="col cadrant-green rounded-4 shadow p-3">
-            <h3 class="text-center">VERSION D'ESSAI (ENTREPRENEUR)</h3>
-            <p class="text-center">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure possimus quas saepe quos ratione itaque rerum consequuntur aliquid magnam obcaecati.
-            </p>
-            <p class="my-4 text-center">
-                <button class="btn btn-green py-3 col-12">Commencer Gratuitement</button>
-            </p>
-            <h5 class="my-3">FONCTIONS DISPONIBLES</h5>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-        </div>
-        <div class="col cadrant-green rounded-4 shadow p-3 mx-5 mt-5">
-            <h3 class="text-center">VERSION STANDARD</h3>
-            <p class="text-center">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure possimus quas saepe quos ratione itaque rerum consequuntur aliquid magnam obcaecati.
-            </p>
-            <h4 class="text-center text-green my-4">100.000 XOF</h4>
-            <p class="my-3">
-                <form action="#" method="post">
-                    <div class="mb-3">
-                        <label for="collaborateur" class="form-label">Nombre d'Utilisateur(s)</label>
-                        <p>
-                            Les utilisateurs inclus: <br>
-                            Incubé, Coach & Equipe
-                        </p>
-                        <input type="number" class="form-control" name="collaborateur" id="collaborateur" min="1" value="1">
-                    </div>
-                    <div>
-                        <button class="btn btn-green py-3 col-12">COMMENCER</button>
-                    </div>
-                    
-                </form>
-            </p>
-            <h5 class="my-3">FONCTIONS DISPONIBLES</h5>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-remove text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-        </div>
-        <div class="col cadrant-green rounded-4 p-3 shadow">
-            <h3 class="text-center">AVANCE</h3>
-            <p class="text-center">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure possimus quas saepe quos ratione itaque rerum consequuntur aliquid magnam obcaecati.
-            </p>
-            <h4 class="text-center text-green my-4">250.000 XOF</h4>
-            <p class="my-3">
-                <form action="#" method="post">
-                    <div class="mb-3">
-                        <label for="collaborateur" class="form-label">Nombre d'Utilisateur(s)</label>
-                        <p>
-                            Les utilisateurs inclus: <br>
-                            Incubé, Coach & Equipe
-                        </p>
-                        <input type="number" class="form-control" name="collaborateur" id="collaborateur" min="1" value="1">
-                    </div>
-                    <div>
-                        <button class="btn btn-green py-3 col-12">COMMENCER</button>
-                    </div>
-                    
-                </form>
-            </p>
-            <h5 class="my-3">FONCTIONS DISPONIBLES</h5>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-            <p>
-                <i class="fa fa-check-circle text-green"></i>
-                Lorem ipsum dolor sit amet consectetur.
-            </p>
-        </div>
-    </div>
+    </section>
     <!-- FIN CATEGORIE DE PAIEMENT -->
 
 

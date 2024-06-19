@@ -100,7 +100,7 @@
             </div>
         </div>
         <div class="row">
-            <form action="#" method="post">
+            <form action="start_identifiants.php" method="post" id="formulaire">
                 <legend>Fonctionnalités souhaitées: </legend>
                 <div class="row hideElement">
                     <div class="my-3">
@@ -142,29 +142,48 @@
                 </div>
                 <div class="row">
                     <div class="col my-3 me-5">
-                        <input type="checkbox" name="program" id="program" class="border border-dark p-3">
+                        <input type="checkbox" value="program" name="program" id="fonction" class="border border-dark p-3">
                         <label for="program" class="form-label">PROGRAMME D'ACCOMPAGNEMENT </label>
                     </div>
                     <div class="col my-3 me-5">
-                        <input type="checkbox" name="program" id="program" class="border border-dark">
-                        <label for="program" class="form-label">GESTION DES COHORTES </label>
+                        <input type="checkbox" value="cohortes" name="cohortes" id="fonction" class="border border-dark">
+                        <label for="cohortes" class="form-label">GESTION DES COHORTES </label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col my-3 me-5">
-                        <input type="checkbox" name="program" id="program" class="border border-dark p-3">
-                        <label for="program" class="form-label">GESTION DES COACH </label>
+                        <input type="checkbox" value="coach" name="coach" id="fonction" class="border border-dark p-3">
+                        <label for="coach" class="form-label">GESTION DES COACH </label>
                     </div>
                     <div class="col my-3 me-5">
-                        <input type="checkbox" name="program" id="program" class="border border-dark">
-                        <label for="program" class="form-label">LEARN </label>
+                        <input type="checkbox" value="learn" name="learn" id="fonction" class="border border-dark">
+                        <label for="learn" class="form-label">LEARN </label>
                     </div>
                 </div>
                 <div class="my-5 text-end">
-                    <button class="btn btn-green rounded-0 px-4">TERMINER</button>
+                    <button type="submit" class="btn btn-green rounded-0 px-4">TERMINER</button>
                 </div>
             </form>
         </div>
     </section>
 </body>
 </html>
+<script>
+    const formulaire = document.getElementById('formulaire');
+    formulaire.addEventListener('submit', function(event) {
+        const checkboxes = document.querySelectorAll('input[id="fonction"]');
+        let checkedOne = false;
+
+        for (const checkbox of checkboxes) {
+            if (checkbox.checked) {
+                checkedOne = true;
+                break;
+            }
+        }
+
+        if (!checkedOne) {
+            event.preventDefault();
+            alert('Vous devez sélectionner au moins une option.');
+        }
+    });
+</script>
