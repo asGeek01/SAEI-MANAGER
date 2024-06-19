@@ -31,45 +31,6 @@
     .hideProgram, .hideSAEI{
         display: block;
     }
-    @keyframes fadeInUpY {
-        from {
-            opacity: 0;
-            transform: translateY(100px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    .animated-text-y {
-        animation: fadeInUpY 2s ease-in-out;
-    }
-    @keyframes fadeInUpXl {
-        from {
-            opacity: 0;
-            transform: translateX(-300px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-    .animated-text-x-left {
-        animation: fadeInUpXl 2s ease-in-out;
-    }
-    @keyframes fadeInUpXr {
-        from {
-            opacity: 0;
-            transform: translateX(500px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-    .animated-text-x-right {
-        animation: fadeInUpXr 2s ease-in-out;
-    }
 </style>
 <body>
     <!-- DEBUT PARTIE: HEADER -->

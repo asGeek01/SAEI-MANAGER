@@ -1,6 +1,8 @@
 <?php 
     session_start();
     $active = "tarifs";
+    $prixAbonnementStdSAEI = 100000;
+    $prixAbonnementASAEI = 250000;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -129,7 +131,7 @@
                 <p class="text-center">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure possimus quas saepe quos ratione itaque rerum consequuntur aliquid magnam obcaecati.
                 </p>
-                <h4 class="text-center text-green my-4">100.000 XOF</h4>
+                <h4 class="text-center text-green my-4" id="prixTotalStd"><?= $prixAbonnementStdSAEI; ?> XOF</h4>
                 <p class="my-3">
                     <form action="#" method="post">
                         <div class="mb-3">
@@ -138,7 +140,7 @@
                                 Les utilisateurs inclus: <br>
                                 Incubé, Coach & Equipe
                             </p>
-                            <input type="number" class="form-control" name="collaborateur" id="collaborateur" min="1" value="1">
+                            <input type="number" class="form-control" name="collaborateur" id="collaborateurStdSAEI" min="1" value="1">
                         </div>
                         <div>
                             <button class="btn btn-green py-3 col-12">COMMENCER</button>
@@ -201,7 +203,7 @@
                 <p class="text-center">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure possimus quas saepe quos ratione itaque rerum consequuntur aliquid magnam obcaecati.
                 </p>
-                <h4 class="text-center text-green my-4">250.000 XOF</h4>
+                <h4 class="text-center text-green my-4" id="prixTotalA"><?= $prixAbonnementASAEI; ?> XOF</h4>
                 <p class="my-3">
                     <form action="#" method="post">
                         <div class="mb-3">
@@ -210,7 +212,7 @@
                                 Les utilisateurs inclus: <br>
                                 Incubé, Coach & Equipe
                             </p>
-                            <input type="number" class="form-control" name="collaborateur" id="collaborateur" min="1" value="1">
+                            <input type="number" class="form-control" name="collaborateur" id="collaborateurASAEI" min="1" value="1">
                         </div>
                         <div>
                             <button class="btn btn-green py-3 col-12">COMMENCER</button>
@@ -720,5 +722,25 @@
         selectTEntrepreneur.style.backgroundColor = "#FFFAFA";
         selectTCoach.style.backgroundColor = "#D9D9D9";
         selectTSAEI.style.backgroundColor = "#D9D9D9";
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const priceInput = document.getElementById('collaborateurStdSAEI');
+        priceInput.addEventListener('input', function(event) {
+            const val = event.target.value;
+            const prixUnitairePHP = <?php echo $prixAbonnementStdSAEI; ?>; // Récupérer le prix unitaire PHP
+            const prixTotal = val * prixUnitairePHP; // Calculer le prix total
+            document.getElementById("prixTotalStd").textContent = prixTotal + " XOF"; // Afficher le prix total dans la page HTML
+        });
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        const priceInput = document.getElementById('collaborateurASAEI');
+        priceInput.addEventListener('input', function(event) {
+            const val = event.target.value;
+            const prixUnitairePHP = <?php echo $prixAbonnementASAEI; ?>; // Récupérer le prix unitaire PHP
+            const prixTotal = val * prixUnitairePHP; // Calculer le prix total
+            document.getElementById("prixTotalA").textContent = prixTotal + " XOF"; // Afficher le prix total dans la page HTML
+        });
     });
 </script>
