@@ -117,7 +117,7 @@
     <div class="row">
         <div class="col">
             <h2 class="my-auto">
-                <a href="index.php"><span class="text-success">SAEI</span>-<span class="text-orange">MANAGER</span></a>
+                <a href="index.php"><span class="text-success">SAEI</span>-<span class="text-orange">MANAGER </span></a>
             </h2>
         </div>
         <div class="col navbar navbar-expand-lg m-0 p-0">
@@ -144,6 +144,6 @@
             </div>
         </div>
     </div>
-    <hr>
 </header>
+<hr>
 <script src="assets/js/bootstrap.min.js"></script>

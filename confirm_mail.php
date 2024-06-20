@@ -1,3 +1,75 @@
+<?php
+    session_start();
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+    use PHPMailer\PHPMailer\SMTP;
+
+    require './PHPMailer/src/Exception.php';
+    require './PHPMailer/src/PHPMailer.php';
+    require './PHPMailer/src/SMTP.php';
+    require 'vendor/autoload.php';
+    if(!empty($_GET)){
+        $email = $_GET['mail'];
+        $mail = new PHPMailer(true);
+
+        try{
+            $mail->SMTPDebug = 0;
+            $mail->isSMTP();
+            $mail->Host = 'smtp.gmail.com';
+            $mail->SMTPAuth = true;
+            $mail->Username = 'dodohoundealo@gmail.com';
+            $mail->Password = 'ryvryvnagpyykuut';
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+            $mail->Port = 465;
+    
+            $mail->setFrom('dodohoundealo@gmail.com','Waxangari L@bs');
+            $mail->addAddress($email);
+            $mail->isHTML(true);
+            // Récupération de la clé
+            require 'connectDB.php';
+            $connect = DataBase::connect();
+            $requete = $connect->prepare("SELECT * FROM users_saei WHERE mail = ?");
+            $requete->execute(array($email));
+            $cle = $requete->fetch();
+    
+            // Corps du message
+            $cleCode = $cle['cle'];
+            $mail->Subject = "Vérification d'Email !";
+            $mail->Body = "Salut votre code est: ".$cleCode;;
+            $mail->setLanguage('fr');
+
+            // Envoie du mail
+            $mail->send();
+    
+        }catch(Exception $e){
+            echo "Message non envoyé ! {$mail->ErrorInfo}";
+        }
+    }else{
+        $email = "";
+    }
+
+    if(!empty($_POST['verifMail'])){
+        $newmail = $_POST['newmail'];
+        require 'connectDB.php';
+        $connect = DataBase::connect();
+        $requete = $connect->prepare("SELECT * FROM users_saei WHERE mail = ?");
+        $requete->execute(array($newmail));
+        $cle = $requete->fetch();
+
+        if($cle['cle'] == $_POST['confMail']){
+            header('Location: dashboardSAEI.php');
+        }else{
+            $error = "Code Incorrect !";
+        }
+    }
+
+    function check($donnee){
+        $donnee = trim($donnee);
+        $donnee = stripslashes($donnee);
+        $donnee = htmlentities($donnee);
+        return $donnee;
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,18 +165,24 @@
 <body class="p-5">
     <section class="container my-5">
         <div class="row d-flex justify-content-center p-5">
-            <div class="col-6 mx-auto">
-                <form action="start_type.php" method="post">
+            <div class="col-6 mx-auto shadow rounded-5 p-5">
+                <form action="confirm_mail.php" method="post">
                     <div class="my-3">
                         <h3>VEUILLEZ CONFIRMER VOTRE MAIL</h3>
                         <p class="mt-3 mb-5">
                             Nous avons envoyer un code au mail suivant: <br>
-                            <span class="text-underline">john.doe@gmail.com</span>
+                            <span class="text-underline"><?= $email ?></span>
                         </p>
+                        <?php if(isset($error)){ ?>
+                            <p class="alert alert-success">
+                                <?= $error ?>
+                            </p>
+                        <?php } ?>
+                        <input type="email" name="newmail" id="newmail" value="<?= $email ?>" style="display: none;">
                         <input type="number" name="confMail" id="confMail" class="form-control" required>
                     </div>
                     <div class="my-5 text-center">
-                        <button class="btn btn-orange rounded-0 px-4">VERIFIER</button>
+                        <input type="submit" value="VERIFIER" name="verifMail" id="verifMail" class="btn btn-orange rounded-0 px-4" />
                     </div>
                 </form>
             </div>

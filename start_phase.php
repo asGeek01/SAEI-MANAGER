@@ -147,7 +147,7 @@
                         <option value="entre 10 et 15 ans">entre 10 et 15 ans</option>
                         <option value="plus de 15 ans">plus de 15 ans</option>
                     </select>
-                </div>
+                </div><?= $_POST['contact'] ?>
                 <div class="my-5 text-end">
                     <button class="btn btn-green rounded-0 px-4">SUIVANT</button>
                 </div>
