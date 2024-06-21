@@ -37,18 +37,29 @@ if (!empty($_POST['mail']) && !empty($_POST['motDePasse']) && !empty($_POST['mot
         $requete = $connect->prepare("SELECT * FROM users_saei;");
         $requete->execute();
 
-        while($checkMail = $requete->fetch()){
-            if($checkMail['mail'] == $mail){
-                $error = "E-mail existant. Veuillez le changer svp...";
-            }else{
-                $requete1 = $connect->prepare("
-                    INSERT INTO users_saei(nomStructure, typeStructure, pays, ville, adresse, contact, site, phaseAccompagnement, anneeActivite, program, cohortes, coach, learn, cle, mail, motDePasse)
-                    VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                ");
-                $requete1->execute(array($nomStructure, $typeStructure, $pays, $ville, $adresse, $contact, $site, $phase, $annee, $program, $cohortes, $coach, $learn, $cle, $mail, $motDePasse));
-                header("Location: confirm_mail.php?mail=$mail");
+        if($requete->rowCount() > 0){
+            while($checkMail = $requete->fetch()){
+                if($checkMail['mail'] == $mail){
+                    $error = "E-mail existant. Veuillez le changer svp...";
+                }else{
+                    $requete1 = $connect->prepare("
+                        INSERT INTO users_saei(nomStructure, typeStructure, pays, ville, adresse, contact, site, phaseAccompagnement, anneeActivite, program, cohortes, coach, learn, cle, mail, motDePasse)
+                        VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    ");
+                    $requete1->execute(array($nomStructure, $typeStructure, $pays, $ville, $adresse, $contact, $site, $phase, $annee, $program, $cohortes, $coach, $learn, $cle, $mail, $motDePasse));
+                    header("Location: confirm_mail.php?mail=$mail");
+                }
             }
+        }else{
+            $requete2 = $connect->prepare("
+                INSERT INTO users_saei(nomStructure, typeStructure, pays, ville, adresse, contact, site, phaseAccompagnement, anneeActivite, program, cohortes, coach, learn, cle, mail, motDePasse)
+                VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ");
+            $requete2->execute(array($nomStructure, $typeStructure, $pays, $ville, $adresse, $contact, $site, $phase, $annee, $program, $cohortes, $coach, $learn, $cle, $mail, $motDePasse));
+            header("Location: confirm_mail.php?mail=$mail");
         }
+
+        
     } else {
         $error = "Mot de passe non identique ! Réessayez...";
     }
@@ -215,7 +226,7 @@ if (!empty($_POST['mail']) && !empty($_POST['motDePasse']) && !empty($_POST['mot
                     <input type="password" name="motDePasse1" id="motDePasse1" class="form-control border border-dark" required>
                 </div>
                 <div class="my-5 text-end">
-                    <button name="submit1" class="btn btn-green rounded-0 px-4">CREER</button>
+                    <button class="btn btn-green rounded-0 px-4">CREER</button>
                 </div>
             </form>
         </div>

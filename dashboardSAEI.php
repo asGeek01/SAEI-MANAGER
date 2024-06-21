@@ -22,10 +22,9 @@
         <div class="layout">
             <!-- Header START -->
             <div class="header">
-                <div class="logo logo-dark">
+                <div class="logo logo-dark my-auto">
                     <a href="index.html">
-                        <img src="assets/images/logo/logo.png" alt="Logo">
-                        <img class="logo-fold" src="assets/images/logo/logo-fold.png" alt="Logo">
+                        <h3><span class="text-green">SAEI</span>-<span class="text-orange">MANAGER</span></h3>
                     </a>
                 </div>
                 <div class="logo logo-white">
@@ -192,23 +191,26 @@
                                 <span class="icon-holder">
                                     <i class="anticon anticon-dashboard"></i>
                                 </span>
-                                <span class="title">Dashboard</span>
+                                <span class="title">Programme</span>
                                 <span class="arrow">
                                     <i class="arrow-icon"></i>
                                 </span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="index.html">Default</a>
+                                    <a href="index.html">Elaborer un programme</a>
                                 </li>
                                 <li>
-                                    <a href="index-crm.html">CRM</a>
+                                    <a href="index-crm.html">Rechercher du financement</a>
                                 </li>
                                 <li>
-                                    <a href="index-e-commerce.html">E-commerce</a>
+                                    <a href="index-e-commerce.html">Mise en oeuvre du programme</a>
                                 </li>
-                                <li class="active">
-                                    <a href="index-projects.html">Projects</a>
+                                <li class="">
+                                    <a href="index-projects.html">Suivie et Evaluation</a>
+                                </li>
+                                <li class="">
+                                    <a href="index-projects.html">Liste des programmes</a>
                                 </li>
                             </ul>
                         </li>
@@ -510,36 +512,69 @@
                                     <img src="assets/images/avatars/thumb-3.jpg" alt="">
                                 </div>
                                 <div class="media-body m-l-15">
-                                    <h4 class="m-b-0">Welcome back, Nichols!</h4>
-                                    <span class="text-gray">Project Manager</span>
+                                    <h4 class="m-b-0">Bienvenue à vous Waxangari Labs!</h4>
+                                    <span class="text-gray">Structure d'Accompagnement à l'Entrepreneuriat Innovant</span>
                                 </div>
                             </div>
-                            <div class="d-md-flex align-items-center d-none">
-                                <div class="media align-items-center m-r-40 m-v-5">
-                                    <div class="font-size-27">
-                                        <i class="text-primary anticon anticon-profile"></i>
-                                    </div>
-                                    <div class="d-flex align-items-center m-l-10">
-                                        <h2 class="m-b-0 m-r-5">78</h2>
-                                        <span class="text-gray">Tasks</span>
-                                    </div>
-                                </div>
-                                <div class="media align-items-center m-r-40 m-v-5">
-                                    <div class="font-size-27">
-                                        <i class="text-success  anticon anticon-appstore"></i>
-                                    </div>
-                                    <div class="d-flex align-items-center m-l-10">
-                                        <h2 class="m-b-0 m-r-5">21</h2>
-                                        <span class="text-gray">Projects</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="media align-items-center">
+                                        <div class="avatar avatar-icon avatar-lg avatar-blue">
+                                            <i class="anticon anticon-dollar"></i>
+                                        </div>
+                                        <div class="m-l-15">
+                                            <h2 class="m-b-0">$23,523</h2>
+                                            <p class="m-b-0 text-muted">Profit</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="media align-items-center m-v-5">
-                                    <div class="font-size-27">
-                                        <i class="text-danger anticon anticon-team"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="media align-items-center">
+                                        <div class="avatar avatar-icon avatar-lg avatar-cyan">
+                                            <i class="anticon anticon-line-chart"></i>
+                                        </div>
+                                        <div class="m-l-15">
+                                            <h2 class="m-b-0">+ 17.21%</h2>
+                                            <p class="m-b-0 text-muted">Growth</p>
+                                        </div>
                                     </div>
-                                    <div class="d-flex align-items-center m-l-10">
-                                        <h2 class="m-b-0 m-r-5">39</h2>
-                                        <span class="text-gray">Members</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="media align-items-center">
+                                        <div class="avatar avatar-icon avatar-lg avatar-gold">
+                                            <i class="anticon anticon-profile"></i>
+                                        </div>
+                                        <div class="m-l-15">
+                                            <h2 class="m-b-0">3,685</h2>
+                                            <p class="m-b-0 text-muted">Orders</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="media align-items-center">
+                                        <div class="avatar avatar-icon avatar-lg avatar-purple">
+                                            <i class="anticon anticon-user"></i>
+                                        </div>
+                                        <div class="m-l-15">
+                                            <h2 class="m-b-0">1,832</h2>
+                                            <p class="m-b-0 text-muted">Customers</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

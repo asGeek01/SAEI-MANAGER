@@ -57,7 +57,7 @@
         $cle = $requete->fetch();
 
         if($cle['cle'] == $_POST['confMail']){
-            header('Location: dashboardSAEI.php');
+            header('Location: connexion.php');
         }else{
             $error = "Code Incorrect !";
         }
