@@ -6,3 +6,6 @@
 body{
     background-color: black;
 }
+.rounded-start{
+    border-top-left-radius: 20px;
+}

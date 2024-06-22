@@ -42,32 +42,41 @@
 
         <section class="row mx-auto d-flex justify-content-center ps-5">
             <div class="col mt-5 ms-5 py-4 px-5 animated-text-x-left">
-                <h1 class="text-start">LOREM IPSUM DOLOR SIT AMET.</h1>
+                <h1 class="text-start display-4"><strong>LOREM IPSUM DOLOR SIT AMET.</strong></h1>
                 <p class="my-5">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto saepe iure, itaque in cumque asperiores.
                 </p>
                 <p>
                     <a href="tarifs.php">
-                        <button class="btn btn-orange">COMMENCER</button>
+                        <button class="btn btn-green px-5 rounded-0">COMMENCER</button>
                     </a>
                 </p>
             </div>
             <div class="col d-flex justify-content-center animated-text-x-right">
-                <img src="assets/images/header-img.png" alt="Image du Header" class="img-fluid">
+                <img src="assets/images/Group-2.png" alt="Image du Header" class="img w-100">
             </div>
         </section>
 
-        <section class="row bg p-5 animated-text-y">
-            <div class="col mx-auto d-flex justify-content-center">
-                <img src="assets/images/dashboard.png" alt="Image du Dashboard" class="img-fluid border border-secondary rounded-3 w-75">
-            </div> 
+        <section class="container-fluid bg">
+            <div class="row p-5 animated-text-y">
+                <div class="col-6 ms-5 p-5 d-flex justify-content-center">
+                    <img src="assets/images/dashboard.png" alt="Image du Dashboard" class="img border border-secondary rounded-3 w-100">
+                </div>
+                <div class="col-5 ms-5 p-5 my-lg-auto">
+                    <h3 class="">TOUT VOS OUTILS DANS UN DASHBOARD</h3>
+                    <p class="h6" style="line-height: 30px;">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis nostrum, ipsa illum animi totam molestiae.
+                    </p>
+                </div>
+            </div>
+            
         </section>
 
         <!-- DEBUT PARTIE: FONCTIONNALTES -->
         <section class="my-5">
             <div class="row animated-text-y">
                 <div class="col text-center">
-                    <h2 class="">LOREM IPSUM DOOR SIT <span class="bg-green py-2 pe-5">AMET.</span></h2>
+                    <h2 class="">LOREM IPSUM DOOR SIT <span class="py-2 pe-5">AMET.</span></h2>
                 </div>
             </div>
             <div class="row my-3 animated-text-y">
@@ -78,7 +87,7 @@
                 </div>
             </div>
             <div class="row mx-5 animated-text-y">
-                <div class="col mx-auto text-center bg-select border-bottom-orange cursor" id="program" onclick="showSection('Program')">
+                <div class="col mx-auto text-center bg-green border-bottom-orange cursor" id="program" onclick="showSection('Program')">
                     <img src="assets/images/programme.png" alt="LES PROGRAMMES" class="img-fluid d-meme-icone"> 
                     PROGRAMME
                 </div>
@@ -238,7 +247,7 @@
         <section class="my-5">
             <div class="row animated-text-y">
                 <div class="col text-center">
-                    <h2 class="">LOREM IPSUM DOOR SIT <span class="bg-green py-2 pe-5">AMET.</span></h2>
+                    <h2 class="">LOREM IPSUM DOOR SIT <span class="py-2 pe-5">AMET.</span></h2>
                 </div>
             </div>
             <div class="row my-3 animated-text-y">
@@ -249,7 +258,7 @@
                 </div>
             </div>
             <div class="row mx-5 animated-text-y">
-                <div class="col mx-auto text-center bg-select border-bottom-orange cursor" id="saei" onclick="showSection1('SAEI')">
+                <div class="col mx-auto text-center bg-green border-bottom-orange cursor" id="saei" onclick="showSection1('SAEI')">
                     <img src="assets/images/programme.png" alt="LES PROGRAMMES" class="img-fluid d-meme-icone"> 
                     SAEI
                 </div>
@@ -393,25 +402,25 @@
     }
     // Partie Sélection
     selectProgram.addEventListener('click', function(){
-        selectProgram.style.backgroundColor = "#FFFAFA";
+        selectProgram.style.backgroundColor = "#00A65A";
         selectCohortes.style.backgroundColor = "#D9D9D9";
         selectCoach.style.backgroundColor = "#D9D9D9";
         selectLearn.style.backgroundColor = "#D9D9D9";
     });
     selectCohortes.addEventListener('click', function(){
-        selectCohortes.style.backgroundColor = "#FFFAFA";
+        selectCohortes.style.backgroundColor = "#00A65A";
         selectProgram.style.backgroundColor = "#D9D9D9";
         selectCoach.style.backgroundColor = "#D9D9D9";
         selectLearn.style.backgroundColor = "#D9D9D9";
     });
     selectCoach.addEventListener('click', function(){
-        selectCoach.style.backgroundColor = "#FFFAFA";
+        selectCoach.style.backgroundColor = "#00A65A";
         selectProgram.style.backgroundColor = "#D9D9D9";
         selectCohortes.style.backgroundColor = "#D9D9D9";
         selectLearn.style.backgroundColor = "#D9D9D9";
     });
     selectLearn.addEventListener('click', function(){
-        selectLearn.style.backgroundColor = "#FFFAFA";
+        selectLearn.style.backgroundColor = "#00A65A";
         selectCohortes.style.backgroundColor = "#D9D9D9";
         selectProgram.style.backgroundColor = "#D9D9D9";
         selectCoach.style.backgroundColor = "#D9D9D9";
@@ -428,17 +437,17 @@
     const selectEntrepreneurs = document.getElementById('entrepreneur');
     // Partie sélection
     selectSAEI.addEventListener('click', function(){
-        selectSAEI.style.backgroundColor = "#FFFAFA";
+        selectSAEI.style.backgroundColor = "#00A65A";
         selectSCoach.style.backgroundColor = "#D9D9D9";
         selectEntrepreneurs.style.backgroundColor = "#D9D9D9";
     });
     selectSCoach.addEventListener('click', function(){
-        selectSCoach.style.backgroundColor = "#FFFAFA";
+        selectSCoach.style.backgroundColor = "#00A65A";
         selectSAEI.style.backgroundColor = "#D9D9D9";
         selectEntrepreneurs.style.backgroundColor = "#D9D9D9";
     });
     selectEntrepreneurs.addEventListener('click', function(){
-        selectEntrepreneurs.style.backgroundColor = "#FFFAFA";
+        selectEntrepreneurs.style.backgroundColor = "#00A65A";
         selectSCoach.style.backgroundColor = "#D9D9D9";
         selectSAEI.style.backgroundColor = "#D9D9D9";
     });

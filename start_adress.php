@@ -84,13 +84,36 @@
     .hideElement{
         display: none;
     }
+    body{
+        background-image: url('assets/images/program-img.jpg');
+        background-size: cover;
+    }
+    .rounded-start-left{
+        border-top-left-radius: 150px;
+    }
+    .rounded-end-right{
+        border-bottom-right-radius: 150px;
+    }
+    .rounded-start-left-1{
+        border-top-left-radius: 100px;
+    }
+    .rounded-end-right-1{
+        border-bottom-right-radius: 100px;
+    }
+    .centre{
+        width: 700px;
+        height: 100%vh;
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
 </style>
 <body>
-    <section class="container my-5">
+    <section class="container centre shadow my-5 bg-light rounded-start-left-1 rounded-end-right-1 p-5">
         <div class="row">
-            <div class="col-12 bg-gray px-4 py-2 rounded-3">
+            <div class="col-12 bg-gray px-4 py-1 rounded-start-left rounded-end-right">
                 <div class="row">
-                    <div class="col-6 bg-green p-3 rounded-3"></div>
+                    <div class="col-6 bg-green p-2 rounded-start-left rounded-end-right"></div>
                 </div>
             </div>
         </div>
@@ -113,7 +136,7 @@
                 </div>
                 <div class="my-3">
                     <label for="pays" class="form-label">Pays: </label>
-                    <select name="pays" id="pays" class="form-control border border-dark">
+                    <select name="pays" id="pays" class="form-control border border-dark bg-light">
                         <option value="Benin">Benin</option>
                         <option value="France">France</option>
                         <option value="Senegal">Senegal</option>
@@ -123,9 +146,9 @@
                 </div>
                 <div class="my-3">
                     <label for="ville" class="form-label">Ville: </label>
-                    <input type="text" name="ville" id="ville" class="form-control border border-dark" placeholder="Ex: Parakou" required>
+                    <input type="text" name="ville" id="ville" class="form-control border border-dark bg-light" placeholder="Ex: Parakou" required>
                 </div>
-                <div class="my-5 text-end">
+                <div class="mt-5 text-end">
                     <button class="btn btn-green rounded-0 px-4">SUIVANT</button>
                 </div>
             </form>

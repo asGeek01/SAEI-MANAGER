@@ -148,9 +148,26 @@ if (!empty($_POST['mail']) && !empty($_POST['motDePasse']) && !empty($_POST['mot
     .hideElement {
         display: none;
     }
+    body{
+        background-image: url('assets/images/program-img.jpg');
+        background-size: cover;
+    }
+    .rounded-start-left-1{
+        border-top-left-radius: 100px;
+    }
+    .rounded-end-right-1{
+        border-bottom-right-radius: 100px;
+    }
+    .centre{
+        width: 700px;
+        height: 100%vh;
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
 </style>
 <body class="p-5">
-    <section class="container my-5">
+    <section class="container centre shadow my-5 bg-light rounded-start-left-1 rounded-end-right-1 p-5">
         <div class="row">
             <form action="start_identifiants.php" method="post" id="formulaire">
                 <legend class="text-center">CREER VOS IDENTIFIANTS DE CONNEXION</legend>
@@ -215,17 +232,17 @@ if (!empty($_POST['mail']) && !empty($_POST['motDePasse']) && !empty($_POST['mot
                 </div>
                 <div class="my-3">
                     <label for="mail" class="form-label">Mail: </label>
-                    <input type="email" name="mail" id="mail" class="form-control border border-dark" required>
+                    <input type="email" name="mail" id="mail" class="bg-light form-control border border-dark" required>
                 </div>
                 <div class="my-3">
                     <label for="motDePasse" class="form-label">Mot De Passe: </label>
-                    <input type="password" name="motDePasse" id="motDePasse" class="form-control border border-dark" required>
+                    <input type="password" name="motDePasse" id="motDePasse" class="bg-light form-control border border-dark" required>
                 </div>
                 <div class="my-3">
                     <label for="motDePasse1" class="form-label">Confirmer le mot de passe: </label>
-                    <input type="password" name="motDePasse1" id="motDePasse1" class="form-control border border-dark" required>
+                    <input type="password" name="motDePasse1" id="motDePasse1" class="bg-light form-control border border-dark" required>
                 </div>
-                <div class="my-5 text-end">
+                <div class="mt-5 text-end">
                     <button class="btn btn-green rounded-0 px-4">CREER</button>
                 </div>
             </form>

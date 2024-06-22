@@ -84,13 +84,36 @@
     .hideElement{
         display: none;
     }
+    body{
+        background-image: url('assets/images/program-img.jpg');
+        background-size: cover;
+    }
+    .rounded-start-left{
+        border-top-left-radius: 150px;
+    }
+    .rounded-end-right{
+        border-bottom-right-radius: 150px;
+    }
+    .rounded-start-left-1{
+        border-top-left-radius: 100px;
+    }
+    .rounded-end-right-1{
+        border-bottom-right-radius: 100px;
+    }
+    .centre{
+        width: 700px;
+        height: 100%vh;
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
 </style>
 <body>
-    <section class="container my-5">
+    <section class="container centre shadow my-5 bg-light rounded-start-left-1 rounded-end-right-1 p-5">
         <div class="row">
-            <div class="col-12 bg-gray px-4 py-2 rounded-3">
+            <div class="col-12 bg-gray px-4 py-1 rounded-start-left rounded-end-right">
                 <div class="row">
-                    <div class="col-4 bg-green p-3 rounded-3"></div>
+                    <div class="col-4 bg-green p-2 rounded-start-left rounded-end-right"></div>
                 </div>
             </div>
         </div>
@@ -109,7 +132,7 @@
                 </div>
                 <div class="my-3">
                     <label for="type_structure" class="form-label">Type de la structure: </label>
-                    <select name="type_structure" id="type_structure" class="form-control border border-dark">
+                    <select name="type_structure" id="type_structure" class="form-control border border-dark bg-light">
                         <option value="Hub d'Innovation">Hub d'Innovation</option>
                         <option value="Fab Labs">Fab Labs</option>
                         <option value="Espace de Co-working">Espace de Co-working</option>

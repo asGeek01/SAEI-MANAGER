@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,483 +22,13 @@
     <div class="app">
         <div class="layout">
             <!-- Header START -->
-            <div class="header">
-                <div class="logo logo-dark my-auto">
-                    <a href="index.html">
-                        <h3><span class="text-green">SAEI</span>-<span class="text-orange">MANAGER</span></h3>
-                    </a>
-                </div>
-                <div class="logo logo-white">
-                    <a href="index.html">
-                        <img src="assets/images/logo/logo-white.png" alt="Logo">
-                        <img class="logo-fold" src="assets/images/logo/logo-fold-white.png" alt="Logo">
-                    </a>
-                </div>
-                <div class="nav-wrap">
-                    <ul class="nav-left">
-                        <li class="desktop-toggle">
-                            <a href="javascript:void(0);">
-                                <i class="anticon"></i>
-                            </a>
-                        </li>
-                        <li class="mobile-toggle">
-                            <a href="javascript:void(0);">
-                                <i class="anticon"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" data-toggle="modal" data-target="#search-drawer">
-                                <i class="anticon anticon-search"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="nav-right">
-                        <li class="dropdown dropdown-animated scale-left">
-                            <a href="javascript:void(0);" data-toggle="dropdown">
-                                <i class="anticon anticon-bell notification-badge"></i>
-                            </a>
-                            <div class="dropdown-menu pop-notification">
-                                <div class="p-v-15 p-h-25 border-bottom d-flex justify-content-between align-items-center">
-                                    <p class="text-dark font-weight-semibold m-b-0">
-                                        <i class="anticon anticon-bell"></i>
-                                        <span class="m-l-10">Notification</span>
-                                    </p>
-                                    <a class="btn-sm btn-default btn" href="javascript:void(0);">
-                                        <small>View All</small>
-                                    </a>
-                                </div>
-                                <div class="relative">
-                                    <div class="overflow-y-auto relative scrollable" style="max-height: 300px">
-                                        <a href="javascript:void(0);" class="dropdown-item d-block p-15 border-bottom">
-                                            <div class="d-flex">
-                                                <div class="avatar avatar-blue avatar-icon">
-                                                    <i class="anticon anticon-mail"></i>
-                                                </div>
-                                                <div class="m-l-15">
-                                                    <p class="m-b-0 text-dark">You received a new message</p>
-                                                    <p class="m-b-0"><small>8 min ago</small></p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="javascript:void(0);" class="dropdown-item d-block p-15 border-bottom">
-                                            <div class="d-flex">
-                                                <div class="avatar avatar-cyan avatar-icon">
-                                                    <i class="anticon anticon-user-add"></i>
-                                                </div>
-                                                <div class="m-l-15">
-                                                    <p class="m-b-0 text-dark">New user registered</p>
-                                                    <p class="m-b-0"><small>7 hours ago</small></p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="javascript:void(0);" class="dropdown-item d-block p-15 border-bottom">
-                                            <div class="d-flex">
-                                                <div class="avatar avatar-red avatar-icon">
-                                                    <i class="anticon anticon-user-add"></i>
-                                                </div>
-                                                <div class="m-l-15">
-                                                    <p class="m-b-0 text-dark">System Alert</p>
-                                                    <p class="m-b-0"><small>8 hours ago</small></p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="javascript:void(0);" class="dropdown-item d-block p-15 ">
-                                            <div class="d-flex">
-                                                <div class="avatar avatar-gold avatar-icon">
-                                                    <i class="anticon anticon-user-add"></i>
-                                                </div>
-                                                <div class="m-l-15">
-                                                    <p class="m-b-0 text-dark">You have a new update</p>
-                                                    <p class="m-b-0"><small>2 days ago</small></p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="dropdown dropdown-animated scale-left">
-                            <div class="pointer" data-toggle="dropdown">
-                                <div class="avatar avatar-image  m-h-10 m-r-15">
-                                    <img src="assets/images/avatars/thumb-3.jpg"  alt="">
-                                </div>
-                            </div>
-                            <div class="p-b-15 p-t-20 dropdown-menu pop-profile">
-                                <div class="p-h-20 p-b-15 m-b-10 border-bottom">
-                                    <div class="d-flex m-r-50">
-                                        <div class="avatar avatar-lg avatar-image">
-                                            <img src="assets/images/avatars/thumb-3.jpg" alt="">
-                                        </div>
-                                        <div class="m-l-10">
-                                            <p class="m-b-0 text-dark font-weight-semibold">Marshall Nichols</p>
-                                            <p class="m-b-0 opacity-07">UI/UX Desinger</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="javascript:void(0);" class="dropdown-item d-block p-h-15 p-v-10">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <div>
-                                            <i class="anticon opacity-04 font-size-16 anticon-user"></i>
-                                            <span class="m-l-10">Edit Profile</span>
-                                        </div>
-                                        <i class="anticon font-size-10 anticon-right"></i>
-                                    </div>
-                                </a>
-                                <a href="javascript:void(0);" class="dropdown-item d-block p-h-15 p-v-10">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <div>
-                                            <i class="anticon opacity-04 font-size-16 anticon-lock"></i>
-                                            <span class="m-l-10">Account Setting</span>
-                                        </div>
-                                        <i class="anticon font-size-10 anticon-right"></i>
-                                    </div>
-                                </a>
-                                <a href="javascript:void(0);" class="dropdown-item d-block p-h-15 p-v-10">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <div>
-                                            <i class="anticon opacity-04 font-size-16 anticon-project"></i>
-                                            <span class="m-l-10">Projects</span>
-                                        </div>
-                                        <i class="anticon font-size-10 anticon-right"></i>
-                                    </div>
-                                </a>
-                                <a href="javascript:void(0);" class="dropdown-item d-block p-h-15 p-v-10">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <div>
-                                            <i class="anticon opacity-04 font-size-16 anticon-logout"></i>
-                                            <span class="m-l-10">Logout</span>
-                                        </div>
-                                        <i class="anticon font-size-10 anticon-right"></i>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" data-toggle="modal" data-target="#quick-view">
-                                <i class="anticon anticon-appstore"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>    
+            <?php if(!empty($_SESSION['nom_structure'])){ ?>
+                <?php require 'headerSAEI.php'; ?>
+            <?php }else{header("Location: connexion.php");}?>    
             <!-- Header END -->
 
             <!-- Side Nav START -->
-            <div class="side-nav">
-                <div class="side-nav-inner">
-                    <ul class="side-nav-menu scrollable">
-                        <li class="nav-item dropdown open">
-                            <a class="dropdown-toggle" href="javascript:void(0);">
-                                <span class="icon-holder">
-                                    <i class="anticon anticon-dashboard"></i>
-                                </span>
-                                <span class="title">Programme</span>
-                                <span class="arrow">
-                                    <i class="arrow-icon"></i>
-                                </span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="index.html">Elaborer un programme</a>
-                                </li>
-                                <li>
-                                    <a href="index-crm.html">Rechercher du financement</a>
-                                </li>
-                                <li>
-                                    <a href="index-e-commerce.html">Mise en oeuvre du programme</a>
-                                </li>
-                                <li class="">
-                                    <a href="index-projects.html">Suivie et Evaluation</a>
-                                </li>
-                                <li class="">
-                                    <a href="index-projects.html">Liste des programmes</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" href="javascript:void(0);">
-                                <span class="icon-holder">
-                                    <i class="anticon anticon-appstore"></i>
-                                </span>
-                                <span class="title">Apps</span>
-                                <span class="arrow">
-                                    <i class="arrow-icon"></i>
-                                </span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="app-chat.html">Chat</a>
-                                </li>
-                                <li>
-                                    <a href="app-file-manager.html">File Manager</a>
-                                </li>
-                                <li>
-                                    <a href="app-mail.html">Mail</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a href="javascript:void(0);">
-                                        <span>Projects</span>
-                                        <span class="arrow">
-                                            <i class="arrow-icon"></i>
-                                        </span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="app-project-list.html">Project List</a>
-                                        </li>
-                                        <li>
-                                            <a href="app-project-details.html">Project Details</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a href="javascript:void(0);">
-                                        <span>E-commerce</span>
-                                        <span class="arrow">
-                                            <i class="arrow-icon"></i>
-                                        </span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="app-e-commerce-order-list.html">Orders List</a>
-                                        </li>
-                                        <li>
-                                            <a href="app-e-commerce-products.html">Products</a>
-                                        </li>
-                                        <li>
-                                            <a href="app-e-commerce-products-list.html">Products List</a>
-                                        </li>
-                                        <li>
-                                            <a href="app-e-commerce-products-edit.html">Products Edit</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" href="javascript:void(0);">
-                                <span class="icon-holder">
-									<i class="anticon anticon-build"></i>
-								</span>
-                                <span class="title">UI Elements</span>
-                                <span class="arrow">
-									<i class="arrow-icon"></i>
-								</span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="avatar.html">Avatar</a>
-                                </li>
-                                <li>
-                                    <a href="alert.html">Alert</a>
-                                </li>
-                                <li>
-                                    <a href="badge.html">Badge</a>
-                                </li>
-                                <li>
-                                    <a href="buttons.html">Buttons</a>
-                                </li>
-                                <li>
-                                    <a href="cards.html">Cards</a>
-                                </li>
-                                <li>
-                                    <a href="icons.html">Icons</a>
-                                </li>
-                                <li>
-                                    <a href="lists.html">Lists</a>
-                                </li>
-                                <li>
-                                    <a href="typography.html">Typography</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" href="javascript:void(0);">
-                                <span class="icon-holder">
-                                    <i class="anticon anticon-hdd"></i>
-                                </span>
-                                <span class="title">Components</span>
-                                <span class="arrow">
-                                    <i class="arrow-icon"></i>
-                                </span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="accordion.html">Accordion</a>
-                                </li>
-                                <li>
-                                    <a href="carousel.html">Carousel</a>
-                                </li>
-                                <li>
-                                    <a href="dropdown.html">Dropdown</a>
-                                </li>
-                                <li>
-                                    <a href="modals.html">Modals</a>
-                                </li>
-                                <li>
-                                    <a href="toasts.html">Toasts</a>
-                                </li>
-                                <li>
-                                    <a href="popover.html">Popover</a>
-                                </li>
-                                <li>
-                                    <a href="slider-progress.html">Slider & Progress</a>
-                                </li>
-                                <li>
-                                    <a href="tabs.html">Tabs</a>
-                                </li>
-                                <li>
-                                    <a href="tooltips.html">Tooltips</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" href="javascript:void(0);">
-                                <span class="icon-holder">
-                                    <i class="anticon anticon-form"></i>
-                                </span>
-                                <span class="title">Forms</span>
-                                <span class="arrow">
-                                    <i class="arrow-icon"></i>
-                                </span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="form-elements.html">Form Elements</a>
-                                </li>
-                                <li>
-                                    <a href="form-layouts.html">Form Layouts</a>
-                                </li>
-                                <li>
-                                    <a href="form-validation.html">Form Validation</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" href="javascript:void(0);">
-                                <span class="icon-holder">
-                                    <i class="anticon anticon-table"></i>
-                                </span>
-                                <span class="title">Tables</span>
-                                <span class="arrow">
-                                    <i class="arrow-icon"></i>
-                                </span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="basic-table.html">Basic Table</a>
-                                </li>
-                                <li>
-                                    <a href="data-table.html">Data Table</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" href="javascript:void(0);">
-                                <span class="icon-holder">
-                                    <i class="anticon anticon-pie-chart"></i>
-                                </span>
-                                <span class="title">Charts</span>
-                                <span class="arrow">
-                                    <i class="arrow-icon"></i>
-                                </span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="chartist.html">Chartist</a>
-                                </li>
-                                <li>
-                                    <a href="chartjs.html">ChartJs</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" href="javascript:void(0);">
-                                <span class="icon-holder">
-                                    <i class="anticon anticon-file"></i>
-                                </span>
-                                <span class="title">Pages</span>
-                                <span class="arrow">
-                                    <i class="arrow-icon"></i>
-                                </span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="profile.html">Profile</a>
-                                </li>
-                                <li>
-                                    <a href="invoice.html">Invoice</a>
-                                </li>
-                                <li>
-                                    <a href="members.html">Members</a>
-                                </li>
-                                <li>
-                                    <a href="pricing.html">Pricing</a>
-                                </li>
-                                <li>
-                                    <a href="setting.html">Setting</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a href="javascript:void(0);">
-                                        <span>Blog</span>
-                                        <span class="arrow">
-                                            <i class="arrow-icon"></i>
-                                        </span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a href="blog-grid.html">Blog Grid</a>
-                                        </li>
-                                        <li>
-                                            <a href="blog-list.html">Blog List</a>
-                                        </li>
-                                        <li>
-                                            <a href="blog-post.html">Blog Post</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle" href="javascript:void(0);">
-                                <span class="icon-holder">
-                                    <i class="anticon anticon-lock"></i>
-                                </span>
-                                <span class="title">Authentication</span>
-                                <span class="arrow">
-                                    <i class="arrow-icon"></i>
-                                </span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="login-1.html">Login 1</a>
-                                </li>
-                                <li>
-                                    <a href="login-2.html">Login 2</a>
-                                </li>
-                                <li>
-                                    <a href="login-3.html">Login 3</a>
-                                </li>
-                                <li>
-                                    <a href="sign-up-1.html">Sign Up 1</a>
-                                </li>
-                                <li>
-                                    <a href="sign-up-2.html">Sign Up 2</a>
-                                </li>
-                                <li>
-                                    <a href="sign-up-3.html">Sign Up 3</a>
-                                </li>
-                                <li>
-                                    <a href="error-1.html">Error 1</a>
-                                </li>
-                                <li>
-                                    <a href="error-2.html">Error 2</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <?php require 'side_nav.php'; ?>
             <!-- Side Nav END -->
 
             <!-- Page Container START -->
@@ -512,68 +43,53 @@
                                     <img src="assets/images/avatars/thumb-3.jpg" alt="">
                                 </div>
                                 <div class="media-body m-l-15">
-                                    <h4 class="m-b-0">Bienvenue à vous Waxangari Labs!</h4>
+                                    <h4 class="m-b-0">Bienvenue à vous <?= $_SESSION['nom_structure'] ?> !</h4>
                                     <span class="text-gray">Structure d'Accompagnement à l'Entrepreneuriat Innovant</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 col-lg-3">
+                        <div class="col-md-6 col-lg-4">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="media align-items-center">
                                         <div class="avatar avatar-icon avatar-lg avatar-blue">
-                                            <i class="anticon anticon-dollar"></i>
+                                            <i class="anticon anticon-solution"></i>
                                         </div>
                                         <div class="m-l-15">
-                                            <h2 class="m-b-0">$23,523</h2>
-                                            <p class="m-b-0 text-muted">Profit</p>
+                                            <h6 class="m-b-0">Nombre de programme (s)</h6>
+                                            <p class="m-b-0 text-muted">3</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-3">
+                        <div class="col-md-6 col-lg-4">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="media align-items-center">
                                         <div class="avatar avatar-icon avatar-lg avatar-cyan">
-                                            <i class="anticon anticon-line-chart"></i>
+                                            <i class="anticon anticon-usergroup-add"></i>
                                         </div>
                                         <div class="m-l-15">
-                                            <h2 class="m-b-0">+ 17.21%</h2>
-                                            <p class="m-b-0 text-muted">Growth</p>
+                                            <h6 class="m-b-0">Nombre de coach (s)</h6>
+                                            <p class="m-b-0 text-muted">11</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-3">
+                        <div class="col-md-6 col-lg-4">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="media align-items-center">
                                         <div class="avatar avatar-icon avatar-lg avatar-gold">
-                                            <i class="anticon anticon-profile"></i>
+                                            <i class="anticon anticon-usergroup-add"></i>
                                         </div>
                                         <div class="m-l-15">
-                                            <h2 class="m-b-0">3,685</h2>
-                                            <p class="m-b-0 text-muted">Orders</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="media align-items-center">
-                                        <div class="avatar avatar-icon avatar-lg avatar-purple">
-                                            <i class="anticon anticon-user"></i>
-                                        </div>
-                                        <div class="m-l-15">
-                                            <h2 class="m-b-0">1,832</h2>
-                                            <p class="m-b-0 text-muted">Customers</p>
+                                            <h6 class="m-b-0">Nombre de cohortes (s)</h6>
+                                            <p class="m-b-0 text-muted">5</p>
                                         </div>
                                     </div>
                                 </div>
@@ -585,156 +101,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <h5 class="mb-0">Project Completion </h5>
-                                        <div class="dropdown dropdown-animated scale-left">
-                                            <a class="text-gray font-size-18" href="javascript:void(0);" data-toggle="dropdown">
-                                                <i class="anticon anticon-ellipsis"></i>
-                                            </a>
-                                            <div class="dropdown-menu">
-                                                <button class="dropdown-item" type="button">
-                                                    <i class="anticon anticon-printer"></i>
-                                                    <span class="m-l-10">Print</span>
-                                                </button>
-                                                <button class="dropdown-item" type="button">
-                                                    <i class="anticon anticon-download"></i>
-                                                    <span class="m-l-10">Download</span>
-                                                </button>
-                                                <button class="dropdown-item" type="button">
-                                                    <i class="anticon anticon-file-excel"></i>
-                                                    <span class="m-l-10">Export</span>
-                                                </button>
-                                                <button class="dropdown-item" type="button">
-                                                    <i class="anticon anticon-reload"></i>
-                                                    <span class="m-l-10">Refresh</span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="d-md-flex justify-content-space m-t-50">
-                                        <div class="completion-chart p-r-10">
-                                            <canvas class="chart" id="completion-chart"></canvas>
-                                        </div>
-                                        <div class="calendar-card border-0">
-                                            <div data-provide="datepicker-inline"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <h5 class="mb-0">Team Members</h5>
-                                        <div>
-                                            <a href="" class="btn btn-default btn-sm">View All</a> 
-                                        </div>
-                                    </div>
-                                    <div class="m-t-30">
-                                        <div class="avatar-string m-l-5">
-                                            <a href="javascript:void(0);" data-toggle="tooltip" title="Erin Gonzales">
-                                                <div class="avatar avatar-image team-member">
-                                                    <img src="assets/images/avatars/thumb-1.jpg" alt="">
-                                                </div>
-                                            </a>
-                                            <a href="javascript:void(0);" data-toggle="tooltip" title="Darryl Day">
-                                                <div class="avatar avatar-image team-member">
-                                                    <img src="assets/images/avatars/thumb-2.jpg" alt="">
-                                                </div>
-                                            </a>
-                                            <a href="javascript:void(0);" data-toggle="tooltip" title="Marshall Nichols">
-                                                <div class="avatar avatar-image team-member">
-                                                    <img src="assets/images/avatars/thumb-3.jpg" alt="">
-                                                </div>
-                                            </a>
-                                            <a href="javascript:void(0);" data-toggle="tooltip" title="Virgil Gonzales">
-                                                <div class="avatar avatar-image team-member">
-                                                    <img src="assets/images/avatars/thumb-4.jpg" alt="">
-                                                </div>
-                                            </a>
-                                            <a href="javascript:void(0);" data-toggle="tooltip" title="Nicole Wyne">
-                                                <div class="avatar avatar-image team-member">
-                                                    <img src="assets/images/avatars/thumb-5.jpg" alt="">
-                                                </div>
-                                            </a>
-                                            <a href="javascript:void(0);" data-toggle="tooltip" title="Riley Newman">
-                                                <div class="avatar avatar-image team-member">
-                                                    <img src="assets/images/avatars/thumb-6.jpg" alt="">
-                                                </div>
-                                            </a>
-                                            <a href="javascript:void(0);" data-toggle="tooltip" title="Pamela Wanda">
-                                                <div class="avatar avatar-image team-member">
-                                                    <img src="assets/images/avatars/thumb-7.jpg" alt="">
-                                                </div>
-                                            </a>
-                                            <a href="javascript:void(0);" data-toggle="tooltip" title="Add Member">
-                                                <div class="avatar avatar-icon avatar-blue team-member">
-                                                    <i class="anticon anticon-plus font-size-22"></i>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <h5 class="mb-0">Upcoming Meeting</h5>
-                                        <div>
-                                            <a href="" class="btn btn-default btn-sm">View All</a> 
-                                        </div>
-                                    </div>
-                                    <div class="m-t-30">
-                                        <div class="d-flex m-b-20">
-                                            <div class="text-center">
-                                                <div class="avatar avatar-text avatar-blue avatar-lg rounded">
-                                                    <span class="font-size-22">17</span>
-                                                </div>
-                                            </div>
-                                            <div class="m-l-20">
-                                                <h5 class="m-b-0">
-                                                    <a class="text-dark">UI Discussion</a>
-                                                </h5>
-                                                <p class="m-b-0">Execute core that as result.</p>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex m-b-20">
-                                            <div class="text-center">
-                                                <div class="avatar avatar-text avatar-cyan avatar-lg rounded">
-                                                    <span class="font-size-22">21</span>
-                                                </div>
-                                            </div>
-                                            <div class="m-l-20">
-                                                <h5 class="m-b-0">
-                                                    <a class="text-dark">Project Schdule</a>
-                                                </h5>
-                                                <p class="m-b-0">Special cloth alert always.</p>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex">
-                                            <div class="text-center">
-                                                <div class="avatar avatar-text avatar-gold avatar-lg rounded">
-                                                    <span class="font-size-22">25</span>
-                                                </div>
-                                            </div>
-                                            <div class="m-l-20">
-                                                <h5 class="m-b-0">
-                                                    <a class="text-dark">Design Discussion</a>
-                                                </h5>
-                                                <p class="m-b-0">Let us wax poetic about.</p>
-                                            </div>
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <h5 class="mb-0">Projects</h5>
+                                        <h5 class="mb-0">Programmes</h5>
                                         <div>
                                             <a href="" class="btn btn-default btn-sm">View All</a> 
                                         </div>
@@ -743,10 +110,10 @@
                                         <table class="table table-hover">
                                             <thead>
                                                 <tr>
-                                                    <th>Project</th>
-                                                    <th>Tasks</th>
-                                                    <th>Members</th>
-                                                    <th>Progress</th>
+                                                    <th>Programme</th>
+                                                    <th>Tâche(s)</th>
+                                                    <th>Membres</th>
+                                                    <th>Progression</th>
                                                 </tr>
                                             </thead>
                                             <tbody>

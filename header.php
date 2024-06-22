@@ -112,38 +112,45 @@
     .animated-text-x-right {
         animation: fadeInUpXr 2s ease-in-out;
     }
+    header{
+        background-color: #0A0A0A;
+        opacity: 0.8;
+    }
+    .border-green{
+        border: 1px solid #00A65A;
+    }
 </style>
-<header class="container">
+<header>
     <div class="row">
-        <div class="col">
-            <h2 class="my-auto">
-                <a href="index.php"><span class="text-success">SAEI</span>-<span class="text-orange">MANAGER </span></a>
+        <div class="col ms-5 my-lg-auto">
+            <h2 class="my-lg-auto">
+                <a href="index.php"><span class="text-success">SAEI</span><span class="text-light">-</span><span class="text-orange">MANAGER </span></a>
             </h2>
         </div>
-        <div class="col navbar navbar-expand-lg m-0 p-0">
+        <div class="col navbar navbar-expand-lg me-5">
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav">
-                    <li class="nav-item my-lg-auto"><a href="fonctionnalites.php" class="nav-link <?php if($active == "fonctionnalites"): ?> activate <?php endif ?>">FONCTIONNALITES</a></li>
-                    <li class="nav-item my-lg-auto"><a href="solution.php" class="nav-link <?php if($active == "solution"): ?> activate <?php endif ?>">SOLUTION</a></li>
-                    <li class="nav-item my-lg-auto"><a href="tarifs.php" class="nav-link <?php if($active == "tarifs"): ?> activate <?php endif ?>">TARIFS</a></li>
-                    <li class="nav-item my-lg-auto col-2"><a href="propos.php" class="nav-link <?php if($active == "propos"): ?> activate <?php endif ?>">A PROPOS</a></li>
-                    <li class="nav-item">
+                    <li class="nav-item my-lg-auto"><a href="fonctionnalites.php" class="nav-link text-white <?php if($active == "fonctionnalites"): ?> activate <?php endif ?>">Fonctionnalites</a></li>
+                    <li class="nav-item my-lg-auto"><a href="solution.php" class="nav-link text-white <?php if($active == "solution"): ?> activate <?php endif ?>">Solutions</a></li>
+                    <li class="nav-item my-lg-auto"><a href="tarifs.php" class="nav-link text-white <?php if($active == "tarifs"): ?> activate <?php endif ?>">Tarifs</a></li>
+                    <li class="nav-item my-lg-auto col-2"><a href="propos.php" class="nav-link text-white <?php if($active == "propos"): ?> activate <?php endif ?>">A propos</a></li>
+                    <li class="nav-item my-lg-auto">
                         <a href="connexion.php" class="nav-link">
-                            <button class="btn border border-dark rounded-0">CONNEXION</button>
+                            <button class="btn border-green rounded-0 text-green" style="font-size: 13px;">Connexion</button>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="tarifs.php" class="nav-link">
-                            <button class="btn btn-orange rounded-0">COMMENCER</button>
+                            <button class="btn btn-orange rounded-0" style="font-size: 13px;">Commencer</button>
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
+        <!-- <hr> -->
     </div>
 </header>
-<hr>
 <script src="assets/js/bootstrap.min.js"></script>

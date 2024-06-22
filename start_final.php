@@ -84,13 +84,36 @@
     .hideElement{
         display: none;
     }
+    body{
+        background-image: url('assets/images/program-img.jpg');
+        background-size: cover;
+    }
+    .rounded-start-left{
+        border-top-left-radius: 150px;
+    }
+    .rounded-end-right{
+        border-bottom-right-radius: 150px;
+    }
+    .rounded-start-left-1{
+        border-top-left-radius: 100px;
+    }
+    .rounded-end-right-1{
+        border-bottom-right-radius: 100px;
+    }
+    .centre{
+        width: 800px;
+        height: 100%vh;
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
 </style>
 <body>
-    <section class="container my-5">
+    <section class="container centre shadow my-5 bg-light rounded-start-left-1 rounded-end-right-1 p-5">
         <div class="row">
-            <div class="col-12 bg-gray px-4 py-2 rounded-3">
+            <div class="col-12 bg-gray px-4 py-1 rounded-start-left rounded-end-right">
                 <div class="row">
-                    <div class="col-12 bg-green p-3 rounded-3"></div>
+                    <div class="col-12 bg-green p-2 rounded-start-left rounded-end-right"></div>
                 </div>
             </div>
         </div>
@@ -141,26 +164,26 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col my-3 me-5">
+                    <div class="col mt-3 me-5">
                         <input type="checkbox" value="program" name="program" id="fonction" class="border border-dark p-3">
                         <label for="program" class="form-label">PROGRAMME D'ACCOMPAGNEMENT </label>
                     </div>
-                    <div class="col my-3 me-5">
+                    <div class="col mt-3 me-5">
                         <input type="checkbox" value="cohortes" name="cohortes" id="fonction" class="border border-dark">
                         <label for="cohortes" class="form-label">GESTION DES COHORTES </label>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col my-3 me-5">
+                    <div class="col mt-3 me-5">
                         <input type="checkbox" value="coach" name="coach" id="fonction" class="border border-dark p-3">
                         <label for="coach" class="form-label">GESTION DES COACH </label>
                     </div>
-                    <div class="col my-3 me-5">
+                    <div class="col mt-3 me-5">
                         <input type="checkbox" value="learn" name="learn" id="fonction" class="border border-dark">
                         <label for="learn" class="form-label">LEARN </label>
                     </div>
                 </div>
-                <div class="my-5 text-end">
+                <div class="mt-5 text-end">
                     <button type="submit" class="btn btn-green rounded-0 px-4">TERMINER</button>
                 </div>
             </form>

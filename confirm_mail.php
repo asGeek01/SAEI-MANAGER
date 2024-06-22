@@ -161,11 +161,28 @@
     .text-underline{
         text-decoration: underline;
     }
+    body{
+        background-image: url('assets/images/program-img.jpg');
+        background-size: cover;
+    }
+    .rounded-start-left-1{
+        border-top-left-radius: 100px;
+    }
+    .rounded-end-right-1{
+        border-bottom-right-radius: 100px;
+    }
+    .centre{
+        width: 700px;
+        height: 100%vh;
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
 </style>
 <body class="p-5">
-    <section class="container my-5">
+    <section class="container centre">
         <div class="row d-flex justify-content-center p-5">
-            <div class="col-6 mx-auto shadow rounded-5 p-5">
+            <div class="mx-auto shadow bg-light p-5 rounded-start-left-1 rounded-end-right-1">
                 <form action="confirm_mail.php" method="post">
                     <div class="my-3">
                         <h3>VEUILLEZ CONFIRMER VOTRE MAIL</h3>
@@ -179,7 +196,7 @@
                             </p>
                         <?php } ?>
                         <input type="email" name="newmail" id="newmail" value="<?= $email ?>" style="display: none;">
-                        <input type="number" name="confMail" id="confMail" class="form-control" required>
+                        <input type="number" name="confMail" id="confMail" class="form-control bg-light" required>
                     </div>
                     <div class="my-5 text-center">
                         <input type="submit" value="VERIFIER" name="verifMail" id="verifMail" class="btn btn-orange rounded-0 px-4" />

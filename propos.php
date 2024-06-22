@@ -96,20 +96,20 @@
                 <?php } ?>
                 <div class="row">
                     <div class="col">
-                        <input type="text" name="nom" id="nom" class="form-control py-3" placeholder="NOM: JOHN DOE">
+                        <input type="text" name="nom" id="nom" class="form-control py-3" placeholder="NOM: JOHN DOE" required>
                     </div>
                     <div class="col">
-                        <input type="text" name="sujet" id="sujet" class="form-control py-3" placeholder="SUJET: PRISE DE CONTACT">
-                    </div>
-                </div>
-                <div class="row my-4">
-                    <div class="col">
-                        <input type="email" name="mail" id="mail" class="form-control py-3" placeholder="MAIL: john.doe@gmail.com">
+                        <input type="text" name="sujet" id="sujet" class="form-control py-3" placeholder="SUJET: PRISE DE CONTACT" required>
                     </div>
                 </div>
                 <div class="row my-4">
                     <div class="col">
-                        <textarea name="message" id="message" class="form-control" placeholder="MESSAGE A ENVOYE" cols="30" rows="5"></textarea>
+                        <input type="email" name="mail" id="mail" class="form-control py-3" placeholder="MAIL: john.doe@gmail.com" required>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col">
+                        <textarea name="message" id="message" class="form-control" placeholder="MESSAGE A ENVOYE" cols="30" rows="5" required></textarea>
                     </div>
                 </div>
                 <div class="row my-4">

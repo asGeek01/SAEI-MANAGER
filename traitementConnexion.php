@@ -13,8 +13,8 @@
         $user = $requete->fetch();
 
         if($requete->rowCount() > 0){
-            $_SESSION['nom_structure'] = $user['nom_structure'];
-            $_SESSION['type_structure'] = $user['type_structure'];
+            $_SESSION['nom_structure'] = $user['nomStructure'];
+            $_SESSION['type_structure'] = $user['typeStructure'];
             $_SESSION['mail'] = $user['mail'];
             $_SESSION['pays'] = $user['pays'];
             $_SESSION['ville'] = $user['ville'];
