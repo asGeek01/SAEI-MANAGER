@@ -30,6 +30,9 @@
             </li>
         </ul>
         <ul class="nav-right">
+            <li>
+                <?= $_SESSION['phaseAccompagnement'] ?>
+            </li>
             <li class="dropdown dropdown-animated scale-left">
                 <a href="javascript:void(0);" data-toggle="dropdown">
                     <i class="anticon anticon-bell notification-badge"></i>

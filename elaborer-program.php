@@ -51,12 +51,14 @@
                             </nav>
                         </div>
                     </div>
-                    <div class="d-flex centre modal-dialog my-sm-5">
+                    <div class="d-flex centre my-sm-5">
                         <div class="col text-center">
-                            <div class="avatar avatar-icon">
-                                <i class="anticon anticon-plus text-dark"></i>
-                            </div>
-                            <p>Créér un programme vierge</p>
+                            <a href="#">
+                                <div class="avatar avatar-icon">
+                                    <i class="anticon anticon-plus text-dark"></i>
+                                </div>
+                                <p>Créér un programme vierge</p>
+                            </a>
                         </div>
                         <div class="col text-center">
                             <div class="avatar avatar-icon">

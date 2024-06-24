@@ -21,6 +21,7 @@
 
     <!-- Lien icone WSA -->
     <link rel="icon" href="images/logo.png">
+    <script src="https://cdn.kkiapay.me/k.js"></script>
 </head>
 <style>
     .hideTCoach, .hideTEntrepreneur{
@@ -30,6 +31,7 @@
 <body>
     <!-- DEBUT PARTIE: HEADER -->
     <?php require 'header.php'; ?>
+    <br><br><br><br>
     <!-- FIN PARTIE: HEADER -->
 
     <!-- DEBUT TEXT INTRODUCTIF TARIFS -->
@@ -133,7 +135,7 @@
                 </p>
                 <h4 class="text-center text-green my-4" id="prixTotalStd"><?= $prixAbonnementStdSAEI; ?> XOF</h4>
                 <p class="my-3">
-                    <form action="#" method="post">
+                    <form action="#" method="post"  class="formulaire">
                         <div class="mb-3">
                             <label for="collaborateur" class="form-label">Nombre d'Utilisateur(s)</label>
                             <p>
@@ -205,7 +207,7 @@
                 </p>
                 <h4 class="text-center text-green my-4" id="prixTotalA"><?= $prixAbonnementASAEI; ?> XOF</h4>
                 <p class="my-3">
-                    <form action="#" method="post">
+                    <form action="#" method="post" class="formulaireAvance">
                         <div class="mb-3">
                             <label for="collaborateur" class="form-label">Nombre d'Utilisateur(s)</label>
                             <p>
@@ -731,16 +733,45 @@
             const val = event.target.value;
             const prixUnitairePHP = <?php echo $prixAbonnementStdSAEI; ?>; // Récupérer le prix unitaire PHP
             const prixTotal = val * prixUnitairePHP; // Calculer le prix total
-            document.getElementById("prixTotalStd").textContent = prixTotal + " XOF"; // Afficher le prix total dans la page HTML
+            document.getElementById("prixTotalStd").textContent = prixTotal + " XOF";
+
+            let formulaire = document.querySelector(".formulaire");
+            formulaire.onsubmit=(e)=>{
+                e.preventDefault();
+                openKkiapayWidget({
+                amount:prixTotal, 
+                position: "right", 
+                callback: "http://localhost:80/SAEI-MANAGER/start.php", 
+                data: "Test de paiement",
+                theme: "#092374",
+                sandbox: "true",
+                key: "ea194080f5a011ee9f805f907fefa779"
+                })
+            }
         });
     });
+
     document.addEventListener('DOMContentLoaded', function() {
         const priceInput = document.getElementById('collaborateurASAEI');
         priceInput.addEventListener('input', function(event) {
             const val = event.target.value;
             const prixUnitairePHP = <?php echo $prixAbonnementASAEI; ?>; // Récupérer le prix unitaire PHP
             const prixTotal = val * prixUnitairePHP; // Calculer le prix total
-            document.getElementById("prixTotalA").textContent = prixTotal + " XOF"; // Afficher le prix total dans la page HTML
+            document.getElementById("prixTotalA").textContent = prixTotal + " XOF";
+
+            let formulaireAvance = document.querySelector(".formulaireAvance");
+            formulaireAvance.onsubmit=(e)=>{
+                e.preventDefault();
+                openKkiapayWidget({
+                amount:prixTotal, 
+                position: "right", 
+                callback: "http://localhost:80/SAEI-MANAGER/start.php", 
+                data: "Test de paiement",
+                theme: "#092374",
+                sandbox: "true",
+                key: "ea194080f5a011ee9f805f907fefa779"
+                })
+            }
         });
     });
 </script>

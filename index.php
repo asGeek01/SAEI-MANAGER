@@ -31,10 +31,14 @@
     .hideProgram, .hideSAEI{
         display: block;
     }
+    main{
+        z-index: 1;
+    }
 </style>
 <body>
     <!-- DEBUT PARTIE: HEADER -->
     <?php require 'header.php'; ?>
+    <br><br><br><br>
     <!-- FIN PARTIE: HEADER -->
 
     <!-- DEBUT PARTIE: PRESENTATION -->
@@ -42,7 +46,7 @@
 
         <section class="row mx-auto d-flex justify-content-center ps-5">
             <div class="col mt-5 ms-5 py-4 px-5 animated-text-x-left">
-                <h1 class="text-start display-4"><strong>LOREM IPSUM DOLOR SIT AMET.</strong></h1>
+                <h1 class="text-start display-4"><strong>BIENVENUE A VOUS CHEZ SAEI-MANAGER.</strong></h1>
                 <p class="my-5">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto saepe iure, itaque in cumque asperiores.
                 </p>
@@ -262,12 +266,12 @@
                     <img src="assets/images/programme.png" alt="LES PROGRAMMES" class="img-fluid d-meme-icone"> 
                     SAEI
                 </div>
-                <div class="col mx-auto text-center bg-gray border-bottom-orange cursor"  id="scoach"  onclick="showSection1('SCoach')">
-                    <img src="assets/images/cohortes.png" alt="LES PROGRAMMES" class="img-fluid d-meme-icone"> 
+                <div class="col mx-auto my-lg-auto text-center bg-gray border-bottom-orange cursor"  id="scoach"  onclick="showSection1('SCoach')">
+                    <img src="assets/images/coach.png" alt="LES PROGRAMMES" class="img-fluid d-meme-icone"> 
                     COACH
                 </div>
-                <div class="col mx-auto text-center bg-gray border-bottom-orange cursor" id="entrepreneur" onclick="showSection1('SEntrepreneur')">
-                    <img src="assets/images/coach.png" alt="LES PROGRAMMES" class="img-fluid d-meme-icone"> 
+                <div class="col mx-auto my-lg-auto text-center bg-gray border-bottom-orange cursor" id="entrepreneur" onclick="showSection1('SEntrepreneur')">
+                    <img src="assets/images/cohortes.png" alt="LES PROGRAMMES" class="img-fluid d-meme-icone"> 
                     ENTREPRENEURS
                 </div>
             </div>

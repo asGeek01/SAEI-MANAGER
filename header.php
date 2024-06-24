@@ -5,7 +5,7 @@
     }
     .activate{
         text-decoration: underline;
-        color: #f76300;
+        color: #00a65a;
         font-weight: bold;
     }
     .activate:hover{
@@ -20,6 +20,7 @@
     .btn-green{
         background-color: #00A65A;
         color: white;
+        border: 2px solid transparent;
     }
     .btn-green:hover{
         background-color: transparent;
@@ -39,6 +40,16 @@
     }
     .bg-green{
         background-color: #00A65A;
+    }
+    .btn-default{
+        background-color: transparent;
+        border: 1px solid #00A65A;
+        color: #00A65A;
+    }
+    .btn-default:hover{
+        background-color: transparent;
+        border: 1px solid #00A65A;
+        color: #00A65A;
     }
     .border-bottom-orange{
         border-bottom: 2px solid #F76300;
@@ -115,12 +126,14 @@
     header{
         background-color: #0A0A0A;
         opacity: 0.8;
+        position: fixed;
+        z-index: 99999999999999;
     }
     .border-green{
         border: 1px solid #00A65A;
     }
 </style>
-<header>
+<header class="container-fluid">
     <div class="row">
         <div class="col ms-5 my-lg-auto">
             <h2 class="my-lg-auto">
@@ -139,7 +152,7 @@
                     <li class="nav-item my-lg-auto col-2"><a href="propos.php" class="nav-link text-white <?php if($active == "propos"): ?> activate <?php endif ?>">A propos</a></li>
                     <li class="nav-item my-lg-auto">
                         <a href="connexion.php" class="nav-link">
-                            <button class="btn border-green rounded-0 text-green" style="font-size: 13px;">Connexion</button>
+                            <button class="btn btn-default rounded-0" style="font-size: 13px;">Connexion</button>
                         </a>
                     </li>
                     <li class="nav-item">

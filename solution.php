@@ -23,6 +23,7 @@
 <body>
     <!-- DEBUT PARTIE: HEADER -->
     <?php require 'header.php'; ?>
+    <br><br><br><br>
     <!-- FIN PARTIE: HEADER -->
 
     <!-- DEBUT TEXT INTRODUCTIF FONCTIONNALITES -->

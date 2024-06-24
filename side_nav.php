@@ -21,7 +21,7 @@
                     </span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li class="active">
+                    <li class="">
                         <a href="elaborer-program.php">Elaborer un programme</a>
                     </li>
                     <li class="">
