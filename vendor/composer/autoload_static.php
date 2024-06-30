@@ -6,22 +6,74 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit2185d2f99bcd56787481d9357a5972d3
 {
+    public static $files = array (
+        '75d4b1647cdbc77a59f72bcb74df0995' => __DIR__ . '/..' . '/spipu/html2pdf/html2pdf.class.php',
+        '766ddebdb359eb94f1ba3ece4f768b10' => __DIR__ . '/..' . '/spipu/html2pdf/_class/exception.class.php',
+        '585b118af784f8bbcc53fec65bb600cd' => __DIR__ . '/..' . '/spipu/html2pdf/_class/locale.class.php',
+        '4148c0c72e9cb9146c3692e138ddcedc' => __DIR__ . '/..' . '/spipu/html2pdf/_class/myPdf.class.php',
+        '24a5693ab78636f7a23448ee74523987' => __DIR__ . '/..' . '/spipu/html2pdf/_class/parsingHtml.class.php',
+        '30eee86291d721c2174ad40239331e78' => __DIR__ . '/..' . '/spipu/html2pdf/_class/parsingCss.class.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
+        'c' => 
+        array (
+            'camilord\\xfpdf\\' => 15,
+        ),
         'P' => 
         array (
             'PHPMailer\\PHPMailer\\' => 20,
         ),
+        'N' => 
+        array (
+            'NahidulHasan\\Html2pdf\\' => 22,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'camilord\\xfpdf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/camilord/xfpdf',
+        ),
         'PHPMailer\\PHPMailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
+        'NahidulHasan\\Html2pdf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nahidulhasan/html2pdf/src',
         ),
     );
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Datamatrix' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/barcodes/datamatrix.php',
+        'FilterASCII85' => __DIR__ . '/..' . '/camilord/xfpdf/filters/FilterASCII85.php',
+        'FilterASCIIHexDecode' => __DIR__ . '/..' . '/camilord/xfpdf/filters/FilterASCIIHexDecode.php',
+        'FilterLZW' => __DIR__ . '/..' . '/camilord/xfpdf/filters/FilterLZW.php',
+        'PDF417' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/barcodes/pdf417.php',
+        'QRcode' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/barcodes/qrcode.php',
+        'TCPDF' => __DIR__ . '/..' . '/tecnickcom/tcpdf/tcpdf.php',
+        'TCPDF2DBarcode' => __DIR__ . '/..' . '/tecnickcom/tcpdf/tcpdf_barcodes_2d.php',
+        'TCPDFBarcode' => __DIR__ . '/..' . '/tecnickcom/tcpdf/tcpdf_barcodes_1d.php',
+        'TCPDF_COLORS' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_colors.php',
+        'TCPDF_FILTERS' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_filters.php',
+        'TCPDF_FONTS' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_fonts.php',
+        'TCPDF_FONT_DATA' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_font_data.php',
+        'TCPDF_IMAGES' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_images.php',
+        'TCPDF_IMPORT' => __DIR__ . '/..' . '/tecnickcom/tcpdf/tcpdf_import.php',
+        'TCPDF_PARSER' => __DIR__ . '/..' . '/tecnickcom/tcpdf/tcpdf_parser.php',
+        'TCPDF_STATIC' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_static.php',
+        'camilord\\xfpdf\\FPDF' => __DIR__ . '/..' . '/camilord/xfpdf/FPDF.php',
+        'camilord\\xfpdf\\FPDF_Protection' => __DIR__ . '/..' . '/camilord/xfpdf/FPDF_Protection.php',
+        'camilord\\xfpdf\\FPDF_TPL' => __DIR__ . '/..' . '/camilord/xfpdf/FPDF_TPL.php',
+        'camilord\\xfpdf\\FPDI' => __DIR__ . '/..' . '/camilord/xfpdf/FPDI.php',
+        'camilord\\xfpdf\\HTML2PDF' => __DIR__ . '/..' . '/camilord/xfpdf/HTML2PDF.php',
+        'camilord\\xfpdf\\XFPDF_CORE' => __DIR__ . '/..' . '/camilord/xfpdf/XFPDF_CORE.php',
+        'camilord\\xfpdf\\fpdi_bridge' => __DIR__ . '/..' . '/camilord/xfpdf/fpdi_bridge.php',
+        'camilord\\xfpdf\\fpdi_pdf_parser' => __DIR__ . '/..' . '/camilord/xfpdf/fpdi_pdf_parser.php',
+        'camilord\\xfpdf\\pdf_context' => __DIR__ . '/..' . '/camilord/xfpdf/pdf_context.php',
+        'camilord\\xfpdf\\pdf_parser' => __DIR__ . '/..' . '/camilord/xfpdf/pdf_parser.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

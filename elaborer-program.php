@@ -1,11 +1,66 @@
-<?php session_start(); ?>
+<?php 
+    session_start();
+    if(!empty($_POST) && isset($_POST)){
+        $titre = $_POST['titreP'];
+        $categorie = $_POST['categorie'];
+        $description = nl2br($_POST['description']);
+        setlocale(LC_TIME, 'fr_FR.UTF-8', 'fra');
+        $date = new DateTime();
+        $formattedDate = $date->format('Y-m-d');
+        $timestamp = strtotime($formattedDate);
+        $formattedDate = strftime('%e %B %Y', $timestamp);
+
+        require 'connectDB.php';
+        $connect = DataBase::connect();
+        $requete = $connect->prepare("INSERT INTO program_elaborer(titre, categorie, program, dateProgram) VALUES(?, ?, ?, ?);");
+        $requete->execute(array($titre, $categorie, $description, $formattedDate));
+        header('Location: list-program.php');
+
+    }
+    if (isset($_POST['import'])) {
+        $titre = $_POST['titreI'];
+        $categorie = $_POST['categorieimport'];
+        $uploadDir = 'uploads/';
+        setlocale(LC_TIME, 'fr_FR.UTF-8', 'fra');
+        $date = new DateTime();
+        $formattedDate = $date->format('Y-m-d');
+        $timestamp = strtotime($formattedDate);
+        $formattedDate = strftime('%e %B %Y', $timestamp);
+        
+        // Vérifie si le dossier existe, sinon le crée
+        if (!is_dir($uploadDir)) {
+            mkdir($uploadDir, 0777, true);
+        }
+    
+        // Chemin complet du fichier uploadé
+        $uploadFile = $uploadDir . basename($_FILES['programfile']['name']);
+    
+        // Vérifie le type du fichier
+        $fileType = mime_content_type($_FILES['programfile']['tmp_name']);
+        if ($fileType !== 'application/pdf') {
+            $error = "Erreur : Le fichier doit être un PDF.";
+            exit;
+        }
+    
+        // Déplace le fichier depuis le répertoire temporaire vers le dossier de destination
+        if (move_uploaded_file($_FILES['programfile']['tmp_name'], $uploadFile)) {
+            require 'connectDB.php';
+            $connect = DataBase::connect();
+            $requete = $connect->prepare("INSERT INTO program_importer(titre, categorie, dateProgram) VALUES(?, ?, ?);");
+            $requete->execute(array($titre, $categorie, $formattedDate));
+            header('Location: list-program.php');
+        } else {
+            $error = "Erreur lors de l'upload du fichier.";
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Enlink - Admin Dashboard Template</title>
+    <title>ELABORER -- SAEI-MANAGER</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/favicon.png">
@@ -16,12 +71,22 @@
     <!-- Core css -->
     <link href="assets/css/app.min.css" rel="stylesheet">
 
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
+
+
 </head>
 <style>
     /* .centre{
         width: 500px;
         height: 100%vh;
     } */
+    .ck-editor__editable[role="textbox"] {
+        /* Editing area */
+        min-height: 300px;
+    }
+    .labProgram, .modProgram, .importProgram{
+        display: none;
+    }
 </style>
 <body>
     <div class="app">
@@ -45,7 +110,7 @@
                         <h2 class="header-title">Elaborer Programme</h2>
                         <div class="header-sub-title">
                             <nav class="breadcrumb breadcrumb-dash">
-                                <a href="#" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Dashboard</a>
+                                <a href="dashboardSAEI.php" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Dashboard</a>
                                 <a class="breadcrumb-item" href="#">Programme</a>
                                 <span class="breadcrumb-item active">Elaborer Programme</span>
                             </nav>
@@ -53,7 +118,7 @@
                     </div>
                     <div class="d-flex centre my-sm-5">
                         <div class="col text-center">
-                            <a href="#">
+                            <a href="#" onclick="cacherLabProgram()">
                                 <div class="avatar avatar-icon">
                                     <i class="anticon anticon-plus text-dark"></i>
                                 </div>
@@ -61,18 +126,122 @@
                             </a>
                         </div>
                         <div class="col text-center">
-                            <div class="avatar avatar-icon">
-                                <i class="anticon anticon-diff text-dark"></i>
-                            </div>
-                            <p>Utiliser un modèle</p>
+                            <a href="#" onclick="cacherModProgram()">
+                                <div class="avatar avatar-icon">
+                                    <i class="anticon anticon-diff text-dark"></i>
+                                </div>
+                                <p>Utiliser un modèle</p>
+                            </a>
                         </div>
                         <div class="col text-center">
-                            <div class="avatar avatar-icon">
-                                <i class="anticon anticon-upload text-dark"></i>
-                            </div>
-                            <p>Importer un programme</p>
+                            <a href="#" onclick="importProgram()">
+                                <div class="avatar avatar-icon">
+                                    <i class="anticon anticon-upload text-dark"></i>
+                                </div>
+                                <p>Importer un programme</p>
+                            </a>
+                            <form action="#" method="post" style="display: none;">
+                                <input type="file" name="labProgram" id="labProgram" />
+                            </form>
                         </div>
                     </div>
+                    <div class="row labProgram">
+                        <div class="col">
+                            <form action="elaborer-program.php" method="post">
+                                <div class="mt-3">
+                                    <label for="titreP" class="form-label">Titre du programme: </label>
+                                    <input type="text" name="titreP" id="titreP" class="form-control">
+                                </div>
+                                <div class="mt-3">
+                                    <label for="categorie" class="form-label">Categorie du programme: </label>
+                                    <select name="categorie" id="categorie" class="form-control">
+                                        <option value="Numérique">Numérique</option>
+                                        <option value="Art">Art</option>
+                                        <option value="Culture">Culture</option>
+                                        <option value="Sport">Sport</option>
+                                        <option value="Audio-Visuel">Audio-Visuel</option>
+                                    </select>
+                                </div>
+                                <div class="mt-3">
+                                    <label for="description" class="form-label">Description du programme: </label>
+                                    <textarea name="description" id="description" class="form-control p-3"></textarea>
+                                </div>
+                                <div class="mt-3">
+                                    <button class="btn btn-primary">ELABORER</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <section class="modProgram">
+                        <div class="row">
+                            <div class="col-4">
+                                <a href="modele-program.php">
+                                    <img src="assets/images/modProgramme.png" alt="Modèle de programme" class="img-fluid border border-dark" style="border: 2px solid black; padding: 20px;">
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="modele-program.php">
+                                    <img src="assets/images/modProgramme.png" alt="Modèle de programme" class="img-fluid border border-dark" style="border: 2px solid black; padding: 20px;">
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="modele-program.php">
+                                    <img src="assets/images/modProgramme.png" alt="Modèle de programme" class="img-fluid border border-dark" style="border: 2px solid black; padding: 20px;">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row my-3">
+                            <div class="col-4">
+                                <a href="modele-program.php">
+                                    <img src="assets/images/modProgramme.png" alt="Modèle de programme" class="img-fluid border border-dark" style="border: 2px solid black; padding: 20px;">
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="modele-program.php">
+                                    <img src="assets/images/modProgramme.png" alt="Modèle de programme" class="img-fluid border border-dark" style="border: 2px solid black; padding: 20px;">
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="modele-program.php">
+                                    <img src="assets/images/modProgramme.png" alt="Modèle de programme" class="img-fluid border border-dark" style="border: 2px solid black; padding: 20px;">
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="importProgram">
+                        <form action="elaborer-program.php" method="post" enctype="multipart/form-data">
+                            <?php if(isset($success)){ ?>
+                                <p class="alert alert-success">
+                                    <?= $success ?>
+                                </p>
+                            <?php }elseif(isset($error)){ ?>
+                                <p class="alert alert-danger">
+                                    <?= $error ?>
+                                </p>
+                            <?php } ?>
+                            <div class="mt-3">
+                                <label for="titreI" class="form-label">Titre du programme: </label>
+                                <input type="text" name="titreI" id="titreI" class="form-control" required>
+                            </div>
+                            <div class="mt-3">
+                                <label for="categorieimport" class="form-label">Categorie du programme: </label>
+                                <select name="categorieimport" id="categorieimport" class="form-control">
+                                    <option value="Numérique">Numérique</option>
+                                    <option value="Art">Art</option>
+                                    <option value="Culture">Culture</option>
+                                    <option value="Sport">Sport</option>
+                                    <option value="Audio-Visuel">Audio-Visuel</option>
+                                </select>
+                            </div>
+                            <div class="mt-3">
+                                <label for="programfile" class="form-label">Sélectionner le document (.pdf): </label>
+                                <input type="file" name="programfile" id="programfile" class="form-control" accept="application/pdf" required/>
+                            </div>
+                            <div class="mt-3">
+                                <button name="import" class="btn btn-primary form-control text-light">Importer</button>
+                            </div>
+                        </form>
+                    </section>
                 </div>
                 <!-- Content Wrapper END -->
 
@@ -271,3 +440,45 @@
 </body>
 
 </html>
+<script>
+    //Afficher / Cacher <<Elaborer Programme>>
+    const pv = document.querySelector('.labProgram');
+    const pm = document.querySelector('.modProgram');
+    const pi = document.querySelector('.importProgram');
+    function cacherLabProgram(){
+        if(pv.style.display == "none"){
+            pv.style.display = "block";
+            pm.style.display = "none";
+            pi.style.display = "none";
+        }else{
+            pv.style.display = "none";
+        }
+    }
+    //Afficher / Cacher <<Modèle de Programme>>
+    function cacherModProgram(){
+        if(pm.style.display == "none"){
+            pm.style.display = "block";
+            pv.style.display = "none";
+            pi.style.display = "none";
+        }else{
+            pm.style.display = "none";
+        }
+    }
+    //Importer un programme
+    function importProgram(){
+        if(pi.style.display == "none"){
+            pi.style.display = "block";
+            pm.style.display = "none";
+            pv.style.display = "none";
+        }else{
+            pi.style.display = "none";
+        }
+    }
+</script>
+<script>
+    ClassicEditor
+        .create( document.querySelector( '#description' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+</script>

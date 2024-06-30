@@ -1,5 +1,9 @@
 {
     "require": {
-        "phpmailer/phpmailer": "^6.9"
+        "phpmailer/phpmailer": "^6.9",
+        "spipu/html2pdf": "^4.6",
+        "nahidulhasan/html2pdf": "^1.4",
+        "camilord/xfpdf": "^1.0",
+        "ensepar/html2pdf-bundle": "*"
     }
 }

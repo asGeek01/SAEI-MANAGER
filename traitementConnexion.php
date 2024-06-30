@@ -30,7 +30,7 @@
             header('Location: dashboardSAEI.php');
         }else{
             $_SESSION['error'] = "Compte inexistant !";
-            header('Loaction: connexion.php');
+            header('Location: connexion.php');
         }
     }
     

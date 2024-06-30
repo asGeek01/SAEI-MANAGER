@@ -51,26 +51,6 @@
                             </nav>
                         </div>
                     </div>
-                    <div class="d-flex centre modal-dialog my-sm-5">
-                        <div class="col text-center">
-                            <div class="avatar avatar-icon">
-                                <i class="anticon anticon-plus text-dark"></i>
-                            </div>
-                            <p>Créér un programme vierge</p>
-                        </div>
-                        <div class="col text-center">
-                            <div class="avatar avatar-icon">
-                                <i class="anticon anticon-diff text-dark"></i>
-                            </div>
-                            <p>Utiliser un modèle</p>
-                        </div>
-                        <div class="col text-center">
-                            <div class="avatar avatar-icon">
-                                <i class="anticon anticon-upload text-dark"></i>
-                            </div>
-                            <p>Importer un programme</p>
-                        </div>
-                    </div>
                 </div>
                 <!-- Content Wrapper END -->
 

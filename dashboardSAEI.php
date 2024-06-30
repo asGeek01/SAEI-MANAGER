@@ -58,8 +58,15 @@
                                             <i class="anticon anticon-solution"></i>
                                         </div>
                                         <div class="m-l-15">
-                                            <h6 class="m-b-0">Nombre de programme (s)</h6>
-                                            <p class="m-b-0 text-muted">3</p>
+                                            <h6 class="m-b-0">Nombre de programme(s)</h6>
+                                            <?php 
+                                                require 'connectDB.php';
+                                                $connect = DataBase::connect();
+                                                $requete = $connect->prepare('SELECT * FROM program_elaborer;');
+                                                $requete->execute();
+                                                $taille = $requete->rowCount();
+                                            ?>
+                                            <p class="m-b-0 text-muted"><?= $taille ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -73,7 +80,7 @@
                                             <i class="anticon anticon-usergroup-add"></i>
                                         </div>
                                         <div class="m-l-15">
-                                            <h6 class="m-b-0">Nombre de coach (s)</h6>
+                                            <h6 class="m-b-0">Nombre de coach(s)</h6>
                                             <p class="m-b-0 text-muted">11</p>
                                         </div>
                                     </div>
@@ -88,8 +95,8 @@
                                             <i class="anticon anticon-usergroup-add"></i>
                                         </div>
                                         <div class="m-l-15">
-                                            <h6 class="m-b-0">Nombre de cohortes (s)</h6>
-                                            <p class="m-b-0 text-muted">5</p>
+                                            <h6 class="m-b-0">Nombre de cohortes(s)</h6>
+                                            <p class="m-b-0 text-muted">2</p>
                                         </div>
                                     </div>
                                 </div>

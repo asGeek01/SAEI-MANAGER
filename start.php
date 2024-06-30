@@ -120,7 +120,7 @@
             </div>
         </div>
         <div class="row">
-            <form action="start.php" method="post">
+            <form action="start_type.php" method="post">
                 <div class="my-3">
                     <label for="nom_structure" class="form-label">Nom de la structure: </label>
                     <input type="text" name="nom_structure" id="nom_structure" class="form-control border border-dark bg-light" required>

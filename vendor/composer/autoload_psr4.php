@@ -6,5 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'camilord\\xfpdf\\' => array($vendorDir . '/camilord/xfpdf'),
     'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
+    'NahidulHasan\\Html2pdf\\' => array($vendorDir . '/nahidulhasan/html2pdf/src'),
 );

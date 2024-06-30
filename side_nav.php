@@ -34,7 +34,7 @@
                         <a href="index-projects.html">Suivie et Evaluation</a>
                     </li>
                     <li class="">
-                        <a href="index-projects.html">Liste des programmes</a>
+                        <a href="list-program.php">Liste des programmes</a>
                     </li>
                 </ul>
             </li>
