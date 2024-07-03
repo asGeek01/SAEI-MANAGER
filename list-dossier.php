@@ -1,24 +1,6 @@
 <?php 
     session_start();
-    if(!empty($_POST) && isset($_POST)){
-        $titre = $_POST['titreP'];
-        $categorie = $_POST['categorie'];
-        $description = nl2br($_POST['description']);
-        $nom_doc = $_POST['titreP']. '.pdf';
-        setlocale(LC_TIME, 'fr_FR.UTF-8', 'fra');
-        $date = new DateTime();
-        $formattedDate = $date->format('Y-m-d');
-        $timestamp = strtotime($formattedDate);
-        $formattedDate = strftime('%e %B %Y', $timestamp);
-        $type = "modele";
-
-        require 'connectDB.php';
-        $connect = DataBase::connect();
-        $requete = $connect->prepare("INSERT INTO program_elaborer(titre, categorie, program, nom_doc, dateProgram, type) VALUES(?, ?, ?, ?, ?, ?);");
-        $requete->execute(array($titre, $categorie, $description, $nom_doc, $formattedDate, $type));
-        header('Location: list-program.php');
-
-    }
+    $active = "documentation";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,38 +8,26 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>ELABORER -- SAEI-MANAGER</title>
+    <title>Enlink - Admin Dashboard Template</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/favicon.png">
 
     <!-- page css -->
-    <link href="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link href="assets/vendors/datatables/dataTables.bootstrap.min.css" rel="stylesheet">
 
     <!-- Core css -->
     <link href="assets/css/app.min.css" rel="stylesheet">
 
-    <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
-
-
 </head>
-<style>
-    /* .centre{
-        width: 500px;
-        height: 100%vh;
-    } */
-    .ck-editor__editable[role="textbox"] {
-        /* Editing area */
-        min-height: 300px;
-    }
-</style>
+
 <body>
     <div class="app">
         <div class="layout">
             <!-- Header START -->
-            <?php if(!empty($_SESSION['nom_structure'])){ ?>
+            <?php if(!empty($_SESSION)){ ?>
                 <?php require 'headerSAEI.php'; ?>
-            <?php }else{header("Location: connexion.php");}?>    
+            <?php }else{ header('Location: connexion.php'); } ?>    
             <!-- Header END -->
 
             <!-- Side Nav START -->
@@ -66,52 +36,121 @@
 
             <!-- Page Container START -->
             <div class="page-container">
-                
+
                 <!-- Content Wrapper START -->
                 <div class="main-content">
                     <div class="page-header">
-                        <h2 class="header-title">Modèle de Programme</h2>
+                        <h2 class="header-title">Liste des Dossier Financier</h2>
                         <div class="header-sub-title">
                             <nav class="breadcrumb breadcrumb-dash">
                                 <a href="dashboardSAEI.php" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Dashboard</a>
                                 <a class="breadcrumb-item" href="#">Programme</a>
-                                <span class="breadcrumb-item active">Modèle de Programme</span>
+                                <a class="breadcrumb-item" href="rechercher-finance.php">Rechercher du financement</a>
+                                <span class="breadcrumb-item active">Liste des Dossier Financier</span>
                             </nav>
                         </div>
                     </div>
-                    <section class="modProgram">
-                        <div class="row">
-                            <div class="col">
-                                <img src="assets/images/modProgramme.png" alt="Modèle de programme" class="img-fluid border border-dark" style="border: 2px solid black; padding: 20px;">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row m-b-30">
+                                <div class="col-lg-8">
+                                    <div class="d-md-flex">
+                                        <div class="m-b-10">
+                                            <select class="custom-select" style="min-width: 180px;">
+                                                <option selected>Statut</option>
+                                                <option value="tout">Tout</option>
+                                                <option value="entrepreneuriat">Entrepreneuriat</option>
+                                                <option value="marketing">Marketing</option>
+                                                <option value="developpement">Developpement</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 text-right">
+                                    <button class="btn btn-primary">
+                                        <i class="anticon anticon-file-excel m-r-5"></i>
+                                        <span>Filtrer</span>
+                                    </button>
+                                </div>
                             </div>
-                            <div class="col">
-                                <form action="modele-program.php" method="post">
-                                    <div class="mt-3">
-                                        <label for="titreP" class="form-label">Titre du programme: </label>
-                                        <input type="text" name="titreP" id="titreP" class="form-control">
-                                    </div>
-                                    <div class="mt-3">
-                                        <label for="categorie" class="form-label">Categorie du programme: </label>
-                                        <select name="categorie" id="categorie" class="form-control">
-                                            <option value="Numérique">Numérique</option>
-                                            <option value="Art">Art</option>
-                                            <option value="Culture">Culture</option>
-                                            <option value="Sport">Sport</option>
-                                            <option value="Audio-Visuel">Audio-Visuel</option>
-                                        </select>
-                                    </div>
-                                    <div class="mt-3">
-                                        <label for="description" class="form-label">Description du programme: </label>
-                                        <textarea name="description" id="description" class="form-control p-3"></textarea>
-                                    </div>
-                                    <div class="mt-3">
-                                        <button class="btn btn-primary">ELABORER</button>
-                                    </div>
-                                </form>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Nom du dossier</th>
+                                            <th>Date</th>
+                                            <th>Catégorie(s)</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                            require 'connectDB.php';
+                                            $connect = DataBase::connect();
+                                            $requete = $connect->prepare("SELECT * FROM dossier_financier ORDER BY id DESC;");
+                                            $requete->execute();
+                                            while($dossier = $requete->fetch()){
+                                        ?>
+                                        <tr>
+                                            <td>
+                                                #<?= $dossier['id'] ?>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="avatar avatar-image avatar-sm m-r-10">
+                                                        <img src="assets/images/avatars/thumb-1.jpg" alt="">
+                                                    </div>
+                                                    <h6 class="m-b-0"><?= $dossier['nomDossier'] ?></h6>
+                                                </div>
+                                            </td>
+                                            <td><?= $dossier['dateDossier'] ?></td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="badge badge-success badge-dot m-r-10"></div>
+                                                    <div><?= $dossier['categorieDossier'] ?></div>
+                                                </div>
+                                            </td>
+                                            <td class="text-right">
+                                                <a href="#" class="doc" data-id="<?= $dossier['id'] ?>" data-titre="<?= $dossier['nomDossier'] ?>">
+                                                    <button class="btn btn-icon btn-hover btn-sm btn-rounded pull-right">
+                                                        <i class="anticon anticon-download"></i>
+                                                    </button>
+                                                </a>
+                                            </td>
+                                            <td style="display: none;">
+                                                <div id="element-<?= $dossier['id'] ?>">
+                                                    <?= $dossier['description'] ?>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <?php } ?>
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+                                        <script>
+                                            document.querySelectorAll('.doc').forEach(function(button) {
+                                                button.addEventListener('click', function(event) {
+                                                    event.preventDefault();
+                                                    const programId = this.getAttribute('data-id');
+                                                    const programTitre = this.getAttribute('data-titre');
+                                                    const element = document.getElementById('element-' + programId);
+                                                    
+                                                    const opt = {
+                                                        margin:       1,          // marges en cm
+                                                        filename:     programTitre + ".pdf",
+                                                        image:        { type: 'jpeg', quality: 0.98 },
+                                                        html2canvas:  { scale: 2 },
+                                                        jsPDF:        { unit: 'cm', format: 'a4', orientation: 'portrait' }
+                                                    };
+
+                                                    html2pdf().set(opt).from(element).save();
+                                                });
+                                            });
+                                        </script>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-                    </section>
-                    
+                    </div>
                 </div>
                 <!-- Content Wrapper END -->
 
@@ -300,48 +339,16 @@
     <script src="assets/js/vendors.min.js"></script>
 
     <!-- page js -->
-    <script src="assets/vendors/chartjs/Chart.min.js"></script>
-    <script src="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
-    <script src="assets/js/pages/dashboard-project.js"></script>
+    <script src="assets/vendors/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/vendors/datatables/dataTables.bootstrap.min.js"></script>
+    <script src="assets/js/pages/e-commerce-order-list.js"></script>
 
     <!-- Core JS -->
     <script src="assets/js/app.min.js"></script>
 
+    <!-- Générer le PDF avec HTML2PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </body>
 
 </html>
-<script>
-    //Afficher / Cacher <<Elaborer Programme>>
-    const pv = document.querySelector('.labProgram');
-    const pm = document.querySelector('.modProgram');
-    function cacherLabProgram(){
-        if(pv.style.display == "none"){
-            pv.style.display = "block";
-            pm.style.display = "none";
-        }else{
-            pv.style.display = "none";
-        }
-    }
-    //Afficher / Cacher <<Modèle de Programme>>
-    function cacherModProgram(){
-        if(pm.style.display == "none"){
-            pm.style.display = "block";
-            pv.style.display = "none";
-        }else{
-            pm.style.display = "none";
-        }
-    }
-    //Importer un programme
-    function importProgram(){
-        document.getElementById('labProgram').click();
-        pm.style.display = "none";
-        pv.style.display = "none";
-    }
-</script>
-<script>
-    ClassicEditor
-        .create( document.querySelector( '#description' ) )
-        .catch( error => {
-            console.error( error );
-        } );
-</script>

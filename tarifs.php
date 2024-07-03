@@ -22,6 +22,8 @@
     <!-- Lien icone WSA -->
     <link rel="icon" href="images/logo.png">
     <script src="https://cdn.kkiapay.me/k.js"></script>
+    <!-- FedaPay -->
+    <script src="https://cdn.fedapay.com/checkout.js?v=1.1.7"></script>
 </head>
 <style>
     .hideTCoach, .hideTEntrepreneur{
@@ -142,7 +144,7 @@
                                 Les utilisateurs inclus: <br>
                                 Incubé, Coach & Equipe
                             </p>
-                            <input type="number" class="form-control" name="collaborateur" id="collaborateurStdSAEI" min="1" value="1">
+                            <input type="number" class="form-control" name="collaborateur" id="collaborateurStdSAEI" min="1" value="1" required>
                         </div>
                         <div>
                             <button class="btn btn-green py-3 col-12">COMMENCER</button>
@@ -214,7 +216,7 @@
                                 Les utilisateurs inclus: <br>
                                 Incubé, Coach & Equipe
                             </p>
-                            <input type="number" class="form-control" name="collaborateur" id="collaborateurASAEI" min="1" value="1">
+                            <input type="number" class="form-control" name="collaborateur" id="collaborateurASAEI" min="1" value="1" required>
                         </div>
                         <div>
                             <button class="btn btn-green py-3 col-12">COMMENCER</button>
@@ -730,23 +732,39 @@
     document.addEventListener('DOMContentLoaded', function() {
         const priceInput = document.getElementById('collaborateurStdSAEI');
         priceInput.addEventListener('input', function(event) {
-            const val = event.target.value;
-            const prixUnitairePHP = <?php echo $prixAbonnementStdSAEI; ?>; // Récupérer le prix unitaire PHP
-            const prixTotal = val * prixUnitairePHP; // Calculer le prix total
-            document.getElementById("prixTotalStd").textContent = prixTotal + " XOF";
+            if(event.target.value != 1){
+                const val = event.target.value;
+                const prixUnitairePHP = <?php echo $prixAbonnementStdSAEI; ?>; // Récupérer le prix unitaire PHP
+                const prixTotal = val * prixUnitairePHP; // Calculer le prix total
+                document.getElementById("prixTotalStd").textContent = prixTotal + " XOF";
 
-            let formulaire = document.querySelector(".formulaire");
-            formulaire.onsubmit=(e)=>{
-                e.preventDefault();
-                openKkiapayWidget({
-                amount:prixTotal, 
-                position: "right", 
-                callback: "http://localhost:80/SAEI-MANAGER/start.php", 
-                data: "Test de paiement",
-                theme: "#092374",
-                sandbox: "true",
-                key: "ea194080f5a011ee9f805f907fefa779"
-                })
+                let formulaire = document.querySelector(".formulaire");
+                formulaire.onsubmit=(e)=>{
+                    e.preventDefault();
+                    openKkiapayWidget({
+                    amount:prixTotal, 
+                    position: "right", 
+                    callback: "http://localhost:80/SAEI-MANAGER/start.php", 
+                    data: "Test de paiement",
+                    theme: "#092374",
+                    sandbox: "true",
+                    key: "ea194080f5a011ee9f805f907fefa779"
+                    })
+                }
+            }else if(event.target.value == 1){
+                let formulaire = document.querySelector(".formulaire");
+                formulaire.onsubmit=(e)=>{
+                    e.preventDefault();
+                    openKkiapayWidget({
+                    amount:1000, 
+                    position: "right", 
+                    callback: "http://localhost:80/SAEI-MANAGER/start.php", 
+                    data: "Test de paiement",
+                    theme: "#092374",
+                    sandbox: "true",
+                    key: "ea194080f5a011ee9f805f907fefa779"
+                    })
+                }
             }
         });
     });

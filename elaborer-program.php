@@ -3,55 +3,61 @@
     if(!empty($_POST) && isset($_POST)){
         $titre = $_POST['titreP'];
         $categorie = $_POST['categorie'];
+        $nom_doc = $_POST['titreP']. '.pdf';
         $description = nl2br($_POST['description']);
         setlocale(LC_TIME, 'fr_FR.UTF-8', 'fra');
         $date = new DateTime();
         $formattedDate = $date->format('Y-m-d');
         $timestamp = strtotime($formattedDate);
         $formattedDate = strftime('%e %B %Y', $timestamp);
+        $type = "vierge";
+
+        if (isset($_POST['import'])) {
+            $type = "import";
+            $titre = $_POST['titreI'];
+            $categorie = $_POST['categorieimport'];
+            $nom_doc = $_FILES['programfile']['name'];
+            $description = "";
+            $uploadDir = 'uploads/';
+            setlocale(LC_TIME, 'fr_FR.UTF-8', 'fra');
+            $date = new DateTime();
+            $formattedDate = $date->format('Y-m-d');
+            $timestamp = strtotime($formattedDate);
+            $formattedDate = strftime('%e %B %Y', $timestamp);
+            
+            // Vérifie si le dossier existe, sinon le crée
+            if (!is_dir($uploadDir)) {
+                mkdir($uploadDir, 0777, true);
+            }
+        
+            // Chemin complet du fichier uploadé
+            $uploadFile = $uploadDir . basename($_FILES['programfile']['name']);
+        
+            // Vérifie le type du fichier
+            $fileType = mime_content_type($_FILES['programfile']['tmp_name']);
+            if ($fileType !== 'application/pdf') {
+                $error = "Erreur : Le fichier doit être un PDF.";
+                exit;
+            }
+        
+            // Déplace le fichier depuis le répertoire temporaire vers le dossier de destination
+            if (move_uploaded_file($_FILES['programfile']['tmp_name'], $uploadFile)) {
+                require 'connectDB.php';
+                $connect = DataBase::connect();
+                $requete = $connect->prepare("INSERT INTO program_elaborer(titre, categorie, program, nom_doc, dateProgram, type) VALUES(?, ?, ?, ?, ?, ?);");
+                $requete->execute(array($titre, $categorie, $description, $nom_doc, $formattedDate, $type));
+                header('Location: list-program.php');
+            } else {
+                $error = "Erreur lors de l'upload du fichier.";
+            }
+        }
 
         require 'connectDB.php';
         $connect = DataBase::connect();
-        $requete = $connect->prepare("INSERT INTO program_elaborer(titre, categorie, program, dateProgram) VALUES(?, ?, ?, ?);");
-        $requete->execute(array($titre, $categorie, $description, $formattedDate));
+        $requete = $connect->prepare("INSERT INTO program_elaborer(titre, categorie, program, dateProgram, type) VALUES(?, ?, ?, ?, ?);");
+        $requete->execute(array($titre, $categorie, $description, $nom_doc, $formattedDate, $type));
         header('Location: list-program.php');
 
-    }
-    if (isset($_POST['import'])) {
-        $titre = $_POST['titreI'];
-        $categorie = $_POST['categorieimport'];
-        $uploadDir = 'uploads/';
-        setlocale(LC_TIME, 'fr_FR.UTF-8', 'fra');
-        $date = new DateTime();
-        $formattedDate = $date->format('Y-m-d');
-        $timestamp = strtotime($formattedDate);
-        $formattedDate = strftime('%e %B %Y', $timestamp);
-        
-        // Vérifie si le dossier existe, sinon le crée
-        if (!is_dir($uploadDir)) {
-            mkdir($uploadDir, 0777, true);
-        }
-    
-        // Chemin complet du fichier uploadé
-        $uploadFile = $uploadDir . basename($_FILES['programfile']['name']);
-    
-        // Vérifie le type du fichier
-        $fileType = mime_content_type($_FILES['programfile']['tmp_name']);
-        if ($fileType !== 'application/pdf') {
-            $error = "Erreur : Le fichier doit être un PDF.";
-            exit;
-        }
-    
-        // Déplace le fichier depuis le répertoire temporaire vers le dossier de destination
-        if (move_uploaded_file($_FILES['programfile']['tmp_name'], $uploadFile)) {
-            require 'connectDB.php';
-            $connect = DataBase::connect();
-            $requete = $connect->prepare("INSERT INTO program_importer(titre, categorie, dateProgram) VALUES(?, ?, ?);");
-            $requete->execute(array($titre, $categorie, $formattedDate));
-            header('Location: list-program.php');
-        } else {
-            $error = "Erreur lors de l'upload du fichier.";
-        }
     }
 ?>
 <!DOCTYPE html>

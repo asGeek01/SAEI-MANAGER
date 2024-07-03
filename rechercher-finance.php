@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php 
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,25 +13,19 @@
     <link rel="shortcut icon" href="assets/images/logo/favicon.png">
 
     <!-- page css -->
-    <link href="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
 
     <!-- Core css -->
     <link href="assets/css/app.min.css" rel="stylesheet">
 
 </head>
-<style>
-    /* .centre{
-        width: 500px;
-        height: 100%vh;
-    } */
-</style>
+
 <body>
     <div class="app">
         <div class="layout">
             <!-- Header START -->
-            <?php if(!empty($_SESSION['nom_structure'])){ ?>
+            <?php if(!empty($_SESSION)){ ?>
                 <?php require 'headerSAEI.php'; ?>
-            <?php }else{header("Location: connexion.php");}?>    
+            <?php }else{ header('Location: connexion.php'); } ?>    
             <!-- Header END -->
 
             <!-- Side Nav START -->
@@ -39,17 +35,186 @@
             <!-- Page Container START -->
             <div class="page-container">
                 
+
                 <!-- Content Wrapper START -->
                 <div class="main-content">
                     <div class="page-header">
-                        <h2 class="header-title">Rechercher Financement</h2>
+                        <h2 class="header-title">Rechercher un financement</h2>
                         <div class="header-sub-title">
                             <nav class="breadcrumb breadcrumb-dash">
-                                <a href="#" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Dashboard</a>
+                                <a href="dashboardSAEI.php" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Dashboard</a>
                                 <a class="breadcrumb-item" href="#">Programme</a>
-                                <span class="breadcrumb-item active">Rechercher Financement</span>
+                                <span class="breadcrumb-item active">Rechercher un financement</span>
                             </nav>
                         </div>
+                    </div>
+                    <div class="container">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img class="img-fluid" src="assets/images/digiboost.png" alt="">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h4 class="m-b-10">Opportunités avec DigiBoost</h4>
+                                        <div class="d-flex align-items-center m-t-5 m-b-15">
+                                            <div class="avatar avatar-image avatar-sm">
+                                                <img src="assets/images/avatars/thumb-2.jpg" alt="">
+                                            </div>
+                                            <div class="m-l-10">
+                                                <span class="text-gray font-weight-semibold">Darryl Day</span>
+                                                <span class="m-h-5 text-gray">|</span>
+                                                <span class="text-gray">2 janvier 2024</span>
+                                            </div>
+                                        </div>
+                                        <p class="m-b-20">Jelly-o sesame snaps halvah croissant oat cake cookie. Cheesecake bear claw topping. Chupa chups apple pie carrot cake chocolate cake caramels</p>
+                                        <div class="text-right">
+                                            <a class="btn btn-hover font-weight-semibold" href="dossier-financier.php">
+                                                <span>Monter votre dossier</span>
+                                            </a>
+                                            <a class="btn btn-hover font-weight-semibold" href="#">
+                                                <span>Découvrir l'opportunités</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img class="img-fluid" src="assets/images/enabel.png" alt="">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h4 class="m-b-10">Opportunités avec Enabel</h4>
+                                        <div class="d-flex align-items-center m-t-5 m-b-15">
+                                            <div class="avatar avatar-image avatar-sm">
+                                                <img src="assets/images/avatars/thumb-2.jpg" alt="">
+                                            </div>
+                                            <div class="m-l-10">
+                                                <span class="text-gray font-weight-semibold">Darryl Day</span>
+                                                <span class="m-h-5 text-gray">|</span>
+                                                <span class="text-gray">2 janvier 2024</span>
+                                            </div>
+                                        </div>
+                                        <p class="m-b-20">Jelly-o sesame snaps halvah croissant oat cake cookie. Cheesecake bear claw topping. Chupa chups apple pie carrot cake chocolate cake caramels</p>
+                                        <div class="text-right">
+                                            <a class="btn btn-hover font-weight-semibold" href="dossier-financier.php">
+                                                <span>Monter votre dossier</span>
+                                            </a>
+                                            <a class="btn btn-hover font-weight-semibold" href="#">
+                                                <span>Découvrir l'opportunités</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img class="img-fluid" src="assets/images/women.png" alt="">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h4 class="m-b-10">Opportunités avec Women</h4>
+                                        <div class="d-flex align-items-center m-t-5 m-b-15">
+                                            <div class="avatar avatar-image avatar-sm">
+                                                <img src="assets/images/avatars/thumb-2.jpg" alt="">
+                                            </div>
+                                            <div class="m-l-10">
+                                                <span class="text-gray font-weight-semibold">Darryl Day</span>
+                                                <span class="m-h-5 text-gray">|</span>
+                                                <span class="text-gray">2 janvier 2024</span>
+                                            </div>
+                                        </div>
+                                        <p class="m-b-20">Jelly-o sesame snaps halvah croissant oat cake cookie. Cheesecake bear claw topping. Chupa chups apple pie carrot cake chocolate cake caramels</p>
+                                        <div class="text-right">
+                                            <a class="btn btn-hover font-weight-semibold" href="dossier-financier.php">
+                                                <span>Monter votre dossier</span>
+                                            </a>
+                                            <a class="btn btn-hover font-weight-semibold" href="#">
+                                                <span>Découvrir l'opportunités</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img class="img-fluid" src="assets/images/fedSAEI.png" alt="">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h4 class="m-b-10">Opportunités avec fedSAEI</h4>
+                                        <div class="d-flex align-items-center m-t-5 m-b-15">
+                                            <div class="avatar avatar-image avatar-sm">
+                                                <img src="assets/images/avatars/thumb-2.jpg" alt="">
+                                            </div>
+                                            <div class="m-l-10">
+                                                <span class="text-gray font-weight-semibold">Darryl Day</span>
+                                                <span class="m-h-5 text-gray">|</span>
+                                                <span class="text-gray">2 janvier 2024</span>
+                                            </div>
+                                        </div>
+                                        <p class="m-b-20">Jelly-o sesame snaps halvah croissant oat cake cookie. Cheesecake bear claw topping. Chupa chups apple pie carrot cake chocolate cake caramels</p>
+                                        <div class="text-right">
+                                            <a class="btn btn-hover font-weight-semibold" href="dossier-financier.php">
+                                                <span>Monter votre dossier</span>
+                                            </a>
+                                            <a class="btn btn-hover font-weight-semibold" href="#">
+                                                <span>Découvrir l'opportunités</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img class="img-fluid" src="assets/images/digiboost.png" alt="">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h4 class="m-b-10">Opportunités avec DigiBoost</h4>
+                                        <div class="d-flex align-items-center m-t-5 m-b-15">
+                                            <div class="avatar avatar-image avatar-sm">
+                                                <img src="assets/images/avatars/thumb-2.jpg" alt="">
+                                            </div>
+                                            <div class="m-l-10">
+                                                <span class="text-gray font-weight-semibold">Darryl Day</span>
+                                                <span class="m-h-5 text-gray">|</span>
+                                                <span class="text-gray">2 janvier 2024</span>
+                                            </div>
+                                        </div>
+                                        <p class="m-b-20">Jelly-o sesame snaps halvah croissant oat cake cookie. Cheesecake bear claw topping. Chupa chups apple pie carrot cake chocolate cake caramels</p>
+                                        <div class="text-right">
+                                            <a class="btn btn-hover font-weight-semibold" href="dossier-financier.php">
+                                                <span>Monter votre dossier</span>
+                                            </a>
+                                            <a class="btn btn-hover font-weight-semibold" href="#">
+                                                <span>Découvrir l'opportunités</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-t-30">
+                        <nav>
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
                 <!-- Content Wrapper END -->
@@ -239,9 +404,6 @@
     <script src="assets/js/vendors.min.js"></script>
 
     <!-- page js -->
-    <script src="assets/vendors/chartjs/Chart.min.js"></script>
-    <script src="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
-    <script src="assets/js/pages/dashboard-project.js"></script>
 
     <!-- Core JS -->
     <script src="assets/js/app.min.js"></script>

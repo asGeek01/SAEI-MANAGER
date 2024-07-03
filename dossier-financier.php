@@ -1,22 +1,20 @@
 <?php 
     session_start();
     if(!empty($_POST) && isset($_POST)){
-        $titre = $_POST['titreP'];
-        $categorie = $_POST['categorie'];
+        $nomDossier = $_POST['titreD'];
+        $categorieDossier = $_POST['categorie'];
         $description = nl2br($_POST['description']);
-        $nom_doc = $_POST['titreP']. '.pdf';
         setlocale(LC_TIME, 'fr_FR.UTF-8', 'fra');
         $date = new DateTime();
         $formattedDate = $date->format('Y-m-d');
         $timestamp = strtotime($formattedDate);
         $formattedDate = strftime('%e %B %Y', $timestamp);
-        $type = "modele";
 
         require 'connectDB.php';
         $connect = DataBase::connect();
-        $requete = $connect->prepare("INSERT INTO program_elaborer(titre, categorie, program, nom_doc, dateProgram, type) VALUES(?, ?, ?, ?, ?, ?);");
-        $requete->execute(array($titre, $categorie, $description, $nom_doc, $formattedDate, $type));
-        header('Location: list-program.php');
+        $requete = $connect->prepare("INSERT INTO dossier_financier(nomDossier, categorieDossier, description, dateDossier) VALUES(?, ?, ?, ?);");
+        $requete->execute(array($nomDossier, $categorieDossier, $description, $formattedDate));
+        header('Location: list-dossier.php');
 
     }
 ?>
@@ -26,26 +24,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>ELABORER -- SAEI-MANAGER</title>
+    <title>Enlink - Admin Dashboard Template</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/favicon.png">
 
     <!-- page css -->
-    <link href="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
 
     <!-- Core css -->
     <link href="assets/css/app.min.css" rel="stylesheet">
 
-    <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
-
-
 </head>
 <style>
-    /* .centre{
-        width: 500px;
-        height: 100%vh;
-    } */
     .ck-editor__editable[role="textbox"] {
         /* Editing area */
         min-height: 300px;
@@ -55,9 +45,9 @@
     <div class="app">
         <div class="layout">
             <!-- Header START -->
-            <?php if(!empty($_SESSION['nom_structure'])){ ?>
+            <?php if(!empty($_SESSION)){ ?>
                 <?php require 'headerSAEI.php'; ?>
-            <?php }else{header("Location: connexion.php");}?>    
+            <?php }else{ header('Location: connexion.php'); } ?>    
             <!-- Header END -->
 
             <!-- Side Nav START -->
@@ -66,52 +56,49 @@
 
             <!-- Page Container START -->
             <div class="page-container">
-                
                 <!-- Content Wrapper START -->
                 <div class="main-content">
                     <div class="page-header">
-                        <h2 class="header-title">Modèle de Programme</h2>
+                        <h2 class="header-title">Monter Dossier Financier</h2>
                         <div class="header-sub-title">
                             <nav class="breadcrumb breadcrumb-dash">
                                 <a href="dashboardSAEI.php" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Dashboard</a>
                                 <a class="breadcrumb-item" href="#">Programme</a>
-                                <span class="breadcrumb-item active">Modèle de Programme</span>
+                                <a class="breadcrumb-item" href="rechercher-finance.php">Rechercher du financement</a>
+                                <span class="breadcrumb-item active">Monter Dossier Financier</span>
                             </nav>
                         </div>
                     </div>
-                    <section class="modProgram">
-                        <div class="row">
-                            <div class="col">
-                                <img src="assets/images/modProgramme.png" alt="Modèle de programme" class="img-fluid border border-dark" style="border: 2px solid black; padding: 20px;">
+                    <div class="container bg-white rounded-3 p-3">
+                        <form action="#" method="post">
+                            <div class="text-right">
+                                <a class="btn btn-hover font-weight-semibold" href="list-dossier.php">
+                                    <span>Liste des Dossiers</span>
+                                </a>
                             </div>
-                            <div class="col">
-                                <form action="modele-program.php" method="post">
-                                    <div class="mt-3">
-                                        <label for="titreP" class="form-label">Titre du programme: </label>
-                                        <input type="text" name="titreP" id="titreP" class="form-control">
-                                    </div>
-                                    <div class="mt-3">
-                                        <label for="categorie" class="form-label">Categorie du programme: </label>
-                                        <select name="categorie" id="categorie" class="form-control">
-                                            <option value="Numérique">Numérique</option>
-                                            <option value="Art">Art</option>
-                                            <option value="Culture">Culture</option>
-                                            <option value="Sport">Sport</option>
-                                            <option value="Audio-Visuel">Audio-Visuel</option>
-                                        </select>
-                                    </div>
-                                    <div class="mt-3">
-                                        <label for="description" class="form-label">Description du programme: </label>
-                                        <textarea name="description" id="description" class="form-control p-3"></textarea>
-                                    </div>
-                                    <div class="mt-3">
-                                        <button class="btn btn-primary">ELABORER</button>
-                                    </div>
-                                </form>
+                            <div class="mt-3">
+                                <label for="titreD" class="form-label">Nommez votre dossier: </label>
+                                <input type="text" name="titreD" id="titreD" class="form-control">
                             </div>
-                        </div>
-                    </section>
-                    
+                            <div class="mt-3">
+                                <label for="categorie" class="form-label">Categorie du dossier: </label>
+                                <select name="categorie" id="categorie" class="form-control">
+                                    <option value="Numérique">Numérique</option>
+                                    <option value="Art">Art</option>
+                                    <option value="Culture">Culture</option>
+                                    <option value="Sport">Sport</option>
+                                    <option value="Audio-Visuel">Audio-Visuel</option>
+                                </select>
+                            </div>
+                            <div class="mt-3">
+                                <label for="description" class="form-label">Description du dossier: </label>
+                                <textarea name="description" id="description" class="form-control p-3"></textarea>
+                            </div>
+                            <div class="mt-3">
+                                <button class="btn btn-primary">MONTER</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
                 <!-- Content Wrapper END -->
 
@@ -300,9 +287,6 @@
     <script src="assets/js/vendors.min.js"></script>
 
     <!-- page js -->
-    <script src="assets/vendors/chartjs/Chart.min.js"></script>
-    <script src="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
-    <script src="assets/js/pages/dashboard-project.js"></script>
 
     <!-- Core JS -->
     <script src="assets/js/app.min.js"></script>
@@ -310,34 +294,7 @@
 </body>
 
 </html>
-<script>
-    //Afficher / Cacher <<Elaborer Programme>>
-    const pv = document.querySelector('.labProgram');
-    const pm = document.querySelector('.modProgram');
-    function cacherLabProgram(){
-        if(pv.style.display == "none"){
-            pv.style.display = "block";
-            pm.style.display = "none";
-        }else{
-            pv.style.display = "none";
-        }
-    }
-    //Afficher / Cacher <<Modèle de Programme>>
-    function cacherModProgram(){
-        if(pm.style.display == "none"){
-            pm.style.display = "block";
-            pv.style.display = "none";
-        }else{
-            pm.style.display = "none";
-        }
-    }
-    //Importer un programme
-    function importProgram(){
-        document.getElementById('labProgram').click();
-        pm.style.display = "none";
-        pv.style.display = "none";
-    }
-</script>
+<script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
 <script>
     ClassicEditor
         .create( document.querySelector( '#description' ) )

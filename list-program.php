@@ -109,21 +109,30 @@
                                                     <div><?= $program['categorie'] ?></div>
                                                 </div>
                                             </td>
-                                            <td class="text-right">
-                                                <a href="#" class="doc" data-id="<?= $program['id'] ?>" data-titre="<?= $program['titre'] ?>">
-                                                    <button class="btn btn-icon btn-hover btn-sm btn-rounded pull-right">
-                                                        <i class="anticon anticon-download"></i>
-                                                    </button>
-                                                </a>
-                                            </td>
-                                            <td style="display: none;">
-                                                <div id="element-<?= $program['id'] ?>">
-                                                    <?= $program['program'] ?>
-                                                </div>
-                                            </td>
+                                            <?php if($program['type'] == "modele" || $program['type'] == "vierge"){ ?>
+                                                <td class="text-right">
+                                                    <a href="#" class="doc" data-id="<?= $program['id'] ?>" data-titre="<?= $program['titre'] ?>">
+                                                        <button class="btn btn-icon btn-hover btn-sm btn-rounded pull-right">
+                                                            <i class="anticon anticon-download"></i>
+                                                        </button>
+                                                    </a>
+                                                </td>
+                                                <td style="display: none;">
+                                                    <div id="element-<?= $program['id'] ?>">
+                                                        <?= $program['program'] ?>
+                                                    </div>
+                                                </td>
+                                            <?php }elseif($program['type'] == "import"){ ?>
+                                                <td class="text-right">
+                                                    <a href="uploads/<?= $program['nom_doc'] ?>" download>
+                                                        <button class="btn btn-icon btn-hover btn-sm btn-rounded pull-right">
+                                                            <i class="anticon anticon-download"></i>
+                                                        </button>
+                                                    </a>
+                                                </td>
+                                            <?php } ?>
                                         </tr>
                                         <?php } ?>
-
                                         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
                                         <script>
                                             document.querySelectorAll('.doc').forEach(function(button) {
